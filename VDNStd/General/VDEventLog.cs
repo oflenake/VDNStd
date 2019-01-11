@@ -47,10 +47,12 @@ namespace VDNStd.General
         #endregion
 
         #region Constructors
-        /// <summary> Default Constructor
+        /// <summary>
+        /// Default Constructor.
         /// </summary>
         public VDEventLog() { }
-        /// <summary> File name parameter constructor
+        /// <summary>
+        /// Parameterized Constructor requiring a log file name parameter.
         /// </summary>
         public VDEventLog(string logfile)
         {

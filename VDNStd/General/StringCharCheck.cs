@@ -17,8 +17,6 @@
 */
 #endregion
 
-using System;
-
 namespace VDNStd.General
 {
     public class StringCharCheck
