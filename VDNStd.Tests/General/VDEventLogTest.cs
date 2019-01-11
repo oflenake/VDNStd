@@ -25,14 +25,14 @@ namespace VDNStd.Tests.General
     [TestClass]
     public class VDEventLogTest
     {
-        [TestMethod]
-        public void DefaultConstructorNull()
-        {
-            VDEventLog vdeventlog = new VDEventLog();
-            var result = vdeventlog;
-            Assert.IsNull(result, string.Format("Expected for '{0}': IsNull; Actual: {1}",
-                                                     vdeventlog == null ? "<null>" : vdeventlog.ToString(), result));
-        }
+        //[TestMethod]
+        //public void DefaultConstructorNull()
+        //{
+        //    VDEventLog vdeventlog = new VDEventLog();
+        //    var result = vdeventlog;
+        //    Assert.IsNull(result, string.Format("Expected for '{0}': IsNull; Actual: {1}",
+        //                                             vdeventlog == null ? "<null>" : vdeventlog.ToString(), result));
+        //}
 
         [TestMethod]
         public void ReturnLogTestTrue()

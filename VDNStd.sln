@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDNStd", "VDNStd\VDNStd.csproj", "{62853FD4-32CE-4896-9C89-4C799624F9E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VDNStd", "VDNStd\VDNStd.csproj", "{62853FD4-32CE-4896-9C89-4C799624F9E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDNStd.Tests", "VDNStd.Tests\VDNStd.Tests.csproj", "{9A8B56B0-F63E-4958-8BC1-56E12170EBAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VDNStd.Tests", "VDNStd.Tests\VDNStd.Tests.csproj", "{9A8B56B0-F63E-4958-8BC1-56E12170EBAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDNStd.Tests.Runner", "VDNStd.Tests.Runner\VDNStd.Tests.Runner.csproj", "{39137EC5-3857-4CEC-805A-C6F0EFE77F63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9A8B56B0-F63E-4958-8BC1-56E12170EBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A8B56B0-F63E-4958-8BC1-56E12170EBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A8B56B0-F63E-4958-8BC1-56E12170EBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39137EC5-3857-4CEC-805A-C6F0EFE77F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39137EC5-3857-4CEC-805A-C6F0EFE77F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39137EC5-3857-4CEC-805A-C6F0EFE77F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39137EC5-3857-4CEC-805A-C6F0EFE77F63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
