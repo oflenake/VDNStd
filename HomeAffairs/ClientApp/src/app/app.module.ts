@@ -40,6 +40,10 @@ import { FooterComponent } from './layout/footer/footer.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'faq', component: FaqComponent },
+      { path: 'contact-us', component: ContactUsComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: 'log-on', component: LogOnComponent },
     ])
   ],
   providers: [],
