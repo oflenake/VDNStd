@@ -1,53 +1,68 @@
 <h2><strong>Log On</strong></h2>
 <p>
-  Please enter your username and password. <a routerLink="/register">Register </a>if you don't have a profile.
+  <small class="text-muted">
+    Please enter your username and password.
+    <a routerLink="/register">Register </a>if you don't have a profile.
+  </small>
 </p>
 <hr />
-<form id="frmLogOnGeneric" action="#" method="post">
-
-  <div class="body-content">
-    <label for="name">Username:</label><br />
-    <input type="text" name="name" id="userName" value="" tabindex="1"><br />
-
-    <label for="name">Password:</label><br />
-    <input type="text" name="name" id="userName" value="" tabindex="2"><br />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="body-content">
+      <form id="frmLogOnGeneric" action="#" method="post">
+        <div class="body-content">
+          <input class="form-control" type="text" name="name" id="username" value="" placeholder="Username"><br />
+          <input class="form-control" type="text" name="name" id="password" value="" placeholder="Password"><br />
+        </div>
+        <div class='clearfix'></div>
+        <div class="body-content">
+          <input class="logonButton-2" type="submit" value="Log In" size="100" /><br />
+          <small class="text-muted"><code>Forgot Usernamr/Password?</code></small>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+    </div>
   </div>
-
+</div>
   <br />
-  <div>
-    <input type="submit" value="Log On">
+
+  <!--<span class="d-block p-2 bg-primary text-white">Header</span>
+  <span class="d-block p-2 bg-dark text-white">Footer</span>-->
+  <!--  inline text diplaye r
+  <div class="d-inline p-2 bg-primary text-white display = 1"></div> -->
+  <!--<label for="name">Username:</label><br />-->
+  <!--<input type="text" name="name" id="userName" value="" tabindex="1"><br />-->
+  <!--<label for="name">Password:</label><br />
+      <input type="text" name="name" id="userName" value="" tabindex="2"><br />-->
+  <!--<div>
+    <h4>Radio Button Choice</h4>
+
+    <label for="radio-choice-1">Choice 1</label>
+    <input type="radio" name="radio-choice" id="radio-choice-1" tabindex="3" value="choice-1">
+
+    <label for="radio-choice-2">Choice 2</label>
+    <input type="radio" name="radio-choice" id="radio-choice-2" tabindex="4" value="choice-2">
   </div>
 
-</form>
-<br />
+  <div>
+    <label for="select-choice">Select Dropdown Choice:</label>
+    <select name="select-choice" id="select-choice">
+      <option value="Choice 1">Choice 1</option>
+      <option value="Choice 2">Choice 2</option>
+      <option value="Choice 3">Choice 3</option>
+    </select>
+  </div>
 
-<!--  inline text diplaye r
-<div class="d-inline p-2 bg-primary text-white display = 1"></div> -->
-<!--<div>
-  <h4>Radio Button Choice</h4>
+  <div>
+    <label for="textarea">Textarea:</label>
+    <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+  </div>
 
-  <label for="radio-choice-1">Choice 1</label>
-  <input type="radio" name="radio-choice" id="radio-choice-1" tabindex="3" value="choice-1">
-
-  <label for="radio-choice-2">Choice 2</label>
-  <input type="radio" name="radio-choice" id="radio-choice-2" tabindex="4" value="choice-2">
-</div>
-
-<div>
-  <label for="select-choice">Select Dropdown Choice:</label>
-  <select name="select-choice" id="select-choice">
-    <option value="Choice 1">Choice 1</option>
-    <option value="Choice 2">Choice 2</option>
-    <option value="Choice 3">Choice 3</option>
-  </select>
-</div>
-
-<div>
-  <label for="textarea">Textarea:</label>
-  <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
-</div>
-
-<div>
-  <label for="checkbox">Checkbox:</label>
-  <input type="checkbox" name="checkbox">
-</div>-->
+  <!--<input type="submit" value="Log On">-->
+  <!--<div>
+    <label for="checkbox">Checkbox:</label>
+    <input type="checkbox" name="checkbox">
+  </div>-->
