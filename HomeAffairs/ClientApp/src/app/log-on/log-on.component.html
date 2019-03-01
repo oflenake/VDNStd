@@ -1,4 +1,26 @@
 <h2><strong>Log On</strong></h2>
+<p>Please log in. <a routerLink="/register">Register </a>if you don't have a profile.</p>
+<form class="form-login">
+
+  <!--<img class="mb-4" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
+  <!--<p class="h3 mb-3 font-weight-normal">Please log in. <a routerLink="/register">Register </a>if you don't have a profile.</p>-->
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+  <!--<div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>-->
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+  <small class="mt-5 mb-3 text-muted"><code>Forgot Username/Password?</code></small>
+  <!--<p class="mt-5 mb-3 text-muted">&copy; 2017-{{ site.time | date: "%Y" }}</p>-->
+</form>
+
+<!--------------------------------------------- Section devider 1 --------------------------------------------------------------->
+
+<!--<h2><strong>Log On</strong></h2>
 <p>
   <small class="text-muted">
     Please enter your username and password.
@@ -16,53 +38,55 @@
           <input class="form-control" type="text" name="name" id="username" value="" placeholder="Username"><br />
           <input class="form-control" type="text" name="name" id="password" value="" placeholder="Password"><br />
         </div>
-        <div class='clearfix'></div>
         <div class="body-content">
-          <input class="logonButton-2" type="submit" value="Log In" size="100" /><br />
-          <small class="text-muted"><code>Forgot Usernamr/Password?</code></small>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">
+            Log In
+          </button><br />
+          <small class="text-muted"><code>Forgot Username/Password?</code></small>
         </div>
       </form>
     </div>
     <div class="col">
     </div>
   </div>
+</div><br />-->
+
+<!--------------------------------------------- Section devider 2 --------------------------------------------------------------->
+
+<!--<span class="d-block p-2 bg-primary text-white">Header</span>
+<span class="d-block p-2 bg-dark text-white">Footer</span>-->
+<!--  inline text diplaye r
+<div class="d-inline p-2 bg-primary text-white display = 1"></div> -->
+<!--<label for="name">Username:</label><br />-->
+<!--<input type="text" name="name" id="userName" value="" tabindex="1"><br />-->
+<!--<label for="name">Password:</label><br />
+    <input type="text" name="name" id="userName" value="" tabindex="2"><br />-->
+<!--<div>
+  <h4>Radio Button Choice</h4>
+
+  <label for="radio-choice-1">Choice 1</label>
+  <input type="radio" name="radio-choice" id="radio-choice-1" tabindex="3" value="choice-1">
+
+  <label for="radio-choice-2">Choice 2</label>
+  <input type="radio" name="radio-choice" id="radio-choice-2" tabindex="4" value="choice-2">
 </div>
-  <br />
 
-  <!--<span class="d-block p-2 bg-primary text-white">Header</span>
-  <span class="d-block p-2 bg-dark text-white">Footer</span>-->
-  <!--  inline text diplaye r
-  <div class="d-inline p-2 bg-primary text-white display = 1"></div> -->
-  <!--<label for="name">Username:</label><br />-->
-  <!--<input type="text" name="name" id="userName" value="" tabindex="1"><br />-->
-  <!--<label for="name">Password:</label><br />
-      <input type="text" name="name" id="userName" value="" tabindex="2"><br />-->
-  <!--<div>
-    <h4>Radio Button Choice</h4>
+<div>
+  <label for="select-choice">Select Dropdown Choice:</label>
+  <select name="select-choice" id="select-choice">
+    <option value="Choice 1">Choice 1</option>
+    <option value="Choice 2">Choice 2</option>
+    <option value="Choice 3">Choice 3</option>
+  </select>
+</div>
 
-    <label for="radio-choice-1">Choice 1</label>
-    <input type="radio" name="radio-choice" id="radio-choice-1" tabindex="3" value="choice-1">
+<div>
+  <label for="textarea">Textarea:</label>
+  <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+</div>
 
-    <label for="radio-choice-2">Choice 2</label>
-    <input type="radio" name="radio-choice" id="radio-choice-2" tabindex="4" value="choice-2">
-  </div>
-
-  <div>
-    <label for="select-choice">Select Dropdown Choice:</label>
-    <select name="select-choice" id="select-choice">
-      <option value="Choice 1">Choice 1</option>
-      <option value="Choice 2">Choice 2</option>
-      <option value="Choice 3">Choice 3</option>
-    </select>
-  </div>
-
-  <div>
-    <label for="textarea">Textarea:</label>
-    <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
-  </div>
-
-  <!--<input type="submit" value="Log On">-->
-  <!--<div>
-    <label for="checkbox">Checkbox:</label>
-    <input type="checkbox" name="checkbox">
-  </div>-->
+<!--<input type="submit" value="Log In">-->
+<!--<div>
+  <label for="checkbox">Checkbox:</label>
+  <input type="checkbox" name="checkbox">
+</div>-->

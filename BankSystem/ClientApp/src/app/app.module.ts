@@ -9,6 +9,12 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { BankHomeComponent } from './bank-home/bank-home.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RegisterComponent } from './register/register.component';
+import { LogOnComponent } from './log-on/log-on.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,16 +22,25 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    BankHomeComponent,
+    ContactUsComponent,
+    RegisterComponent,
+    LogOnComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: BankHomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'contact-us', component: ContactUsComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: 'log-on', component: LogOnComponent },
     ])
   ],
   providers: [],
