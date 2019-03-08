@@ -1,8 +1,12 @@
-body {
-  padding-top: 5rem;
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+body-template {
+  padding-bottom: 20px;
 }
 
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: left;
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
 }

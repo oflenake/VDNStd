@@ -1,40 +1,48 @@
-/* FooterComponent's private CSS styles */
-h2 {
-  color: red;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+li .glyphicon {
+  margin-right: 10px;
 }
 
-body {
-  margin: 2em;
+/* Highlighting rules for nav menu items, using normal link items */
+li.link-active a,
+li.link-active a:hover,
+li.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
 }
 
-body, input[text], button {
-  color: crimson;
-  font-family: Cambria, Georgia;
+i .glyphicon {
+  margin-right: 10px;
 }
 
-  button.clear {
-    font-family: Arial;
-    background-color: #eee;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    cursor: hand;
-  }
+/* Highlighting rules for nav menu items, using material icons (material-icons) */
+i.link-active a,
+i.link-active a:hover,
+i.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
+}
 
-  button:hover {
-    background-color: #cfd8dc;
-  }
+img .glyphicon {
+  margin-right: 10px;
+}
 
-  button:disabled {
-    background-color: #eee;
-    color: #aaa;
-    cursor: auto;
-  }
+/* Highlighting rules for nav menu items, using images as link items */
+img.link-active a,
+img.link-active a:hover,
+img.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
+}
 
-  button.clear {
-    color: #888;
-    margin-bottom: 12px;
-  }
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.footer {
+  background-color: #e4eced;
+}

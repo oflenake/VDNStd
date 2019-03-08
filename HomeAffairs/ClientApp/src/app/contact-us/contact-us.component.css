@@ -1,0 +1,48 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+li .glyphicon {
+  margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items, using normal link items */
+li.link-active a,
+li.link-active a:hover,
+li.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
+}
+
+i .glyphicon {
+  margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items, using material icons (material-icons) */
+i.link-active a,
+i.link-active a:hover,
+i.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
+}
+
+img .glyphicon {
+  margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items, using images as link items */
+img.link-active a,
+img.link-active a:hover,
+img.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
+}
+
+body-template {
+  padding-bottom: 20px;
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
