@@ -1,11 +1,25 @@
-.container {
+/* Custom page CSS
+-------------------------------------------------- */
+.header-container {
   margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.banner-header {
+.header-banner {
+  width: auto;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-.banner-splitter {
+.header-splitter {
+  width: auto;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }

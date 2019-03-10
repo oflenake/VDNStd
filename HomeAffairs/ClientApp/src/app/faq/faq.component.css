@@ -33,3 +33,22 @@ img.link-active a:focus {
   background-color: #4189C7;
   color: white;
 }
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+.body-template {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container {
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}

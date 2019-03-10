@@ -39,10 +39,15 @@ img.link-active a:focus {
 
 .container {
   width: auto;
-  max-width: 680px;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 0 15px;
 }
 
-.footer {
+.footer-bg-color {
   background-color: #e4eced;
+}
+
+.footer-cp-bg-color {
+  background-color: #ebedf5;
 }

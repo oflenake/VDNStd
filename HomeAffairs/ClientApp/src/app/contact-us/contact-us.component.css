@@ -37,12 +37,18 @@ img.link-active a:focus {
   color: white;
 }
 
-body-template {
-  padding-bottom: 20px;
+.body-template {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .container {
   width: auto;
-  max-width: 680px;
-  padding: 0 15px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
