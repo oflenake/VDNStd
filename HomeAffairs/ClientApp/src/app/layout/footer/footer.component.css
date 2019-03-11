@@ -1,53 +1,146 @@
 /* Custom page CSS
 -------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-li .glyphicon {
-  margin-right: 10px;
+/* Highlighting rules for social icons, using normal link items */
+a:link, a:visited {
+  background-color: inherit;
+  color: lightgrey;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* Highlighting rules for nav menu items, using normal link items */
-li.link-active a,
-li.link-active a:hover,
-li.link-active a:focus {
-  background-color: #4189C7;
+a:hover {
+  background-color: inherit;
   color: white;
 }
 
-i .glyphicon {
-  margin-right: 10px;
+a:active {
+  background-color: inherit;
+  color: black;
 }
 
-/* Highlighting rules for nav menu items, using material icons (material-icons) */
-i.link-active a,
-i.link-active a:hover,
-i.link-active a:focus {
-  background-color: #4189C7;
-  color: white;
-}
-
-img .glyphicon {
-  margin-right: 10px;
-}
-
-/* Highlighting rules for nav menu items, using images as link items */
-img.link-active a,
-img.link-active a:hover,
-img.link-active a:focus {
-  background-color: #4189C7;
-  color: white;
-}
-
-.container {
+/* Template containers */
+.footer-container {
   width: auto;
   margin-left: 20px;
   margin-right: 20px;
   padding: 0 15px;
 }
 
-.footer-bg-color {
-  background-color: #e4eced;
+.footer-copyright-container {
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.footer-cp-bg-color {
-  background-color: #ebedf5;
+.footer-bg-color {
+  background-color: #2b2828;
+  color: white;
 }
+
+.footer-copyright-bg-color {
+  background-color: #141313;
+  color: white;
+}
+
+/* Custom styling for font awesome support and social icons */
+/* Support icons */
+.fa-info-circle {
+  margin-right: 10px;
+  color: dodgerblue;
+}
+  .fa-info-circle.vanished {
+    opacity: 0.0;
+  }
+
+.fa-bug {
+  margin-right: 10px;
+  color: dodgerblue;
+}
+  .fa-bug.vanished {
+    opacity: 0.0;
+  }
+
+.fa-user-tie {
+  margin-right: 10px;
+  color: dodgerblue;
+}
+  .fa-user-tie.vanished {
+    opacity: 0.0;
+  }
+
+/* Social icons */
+.fa-facebook-square {
+  margin-right: 10px;
+  color: orange;
+}
+  .fa-facebook-square.vanished {
+    opacity: 0.0;
+  }
+
+.fa-twitter {
+  margin-right: 10px;
+  color: orange;
+}
+  .fa-twitter.vanished {
+    opacity: 0.0;
+  }
+
+.fa-whatsapp {
+  margin-right: 10px;
+  color: orange;
+}
+  .fa-whatsapp.vanished {
+    opacity: 0.0;
+  }
+
+.fa-github {
+  margin-right: 10px;
+  color: orange;
+}
+  .fa-github.vanished {
+    opacity: 0.0;
+  }
+
+/* Custom styling for font awesome nav menu icons */
+.fa-home {
+  margin-right: 10px;
+  color: green;
+}
+  .fa-home.vanished {
+    opacity: 0.0;
+  }
+
+.fa-envelope {
+  margin-right: 10px;
+  color: green;
+}
+  .fa-envelope.vanished {
+    opacity: 0.0;
+  }
+
+.fa-question-circle {
+  margin-right: 10px;
+  color: dodgerblue;
+}
+  .fa-question-circle.vanished {
+    opacity: 0.0;
+  }
+
+.fa-edit {
+  margin-right: 10px;
+  color: green;
+}
+  .fa-edit.vanished {
+    opacity: 0.0;
+  }
+
+.fa-sign-in-alt {
+  margin-right: 10px;
+  color: green;
+}
+  .fa-sign-in-alt.vanished {
+    opacity: 0.0;
+  }

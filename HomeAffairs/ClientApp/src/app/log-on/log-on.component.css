@@ -35,6 +35,35 @@ img.link-active a:focus {
   color: white;
 }
 
+/* Link custom styles */
+a:link {
+  background-color: #ffffff;
+  color: orange;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+a:visited {
+  background-color: #ffffff;
+  color: black;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: #ffffff;
+  color: green;
+}
+
+a:active {
+  background-color: #ffffff;
+  color: black;
+}
+
 body {
   height: 100%;
 }
@@ -70,6 +99,11 @@ body {
   max-width: 420px;
   padding: 15px;
   margin: auto;
+}
+
+.fa-city {
+  font-size: 48px;
+  color: green;
 }
 
 .form-label-group {

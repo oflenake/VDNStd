@@ -9,7 +9,7 @@
     <Authors>Onkgopotse Lenake</Authors>
     <CopyRight>Vision-Dream</CopyRight>
     <PackageTags>macs solution online system</PackageTags>
-    <PackageProjectUrl>https://github.com/Kgupi/VDNStd/MACSSolution</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/Kgupi/VDNStd/tree/master/MACSSolution</PackageProjectUrl>
     <PackageIconUrl>https://secure.gravatar.com/avatar/63feb98e7407d11095e1442ae074cfe2</PackageIconUrl>
     <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
     <!--<RuntimeIdentifiers>win10-x64;ubuntu.16.10-x64;osx.10.12-x64</RuntimeIdentifiers>-->

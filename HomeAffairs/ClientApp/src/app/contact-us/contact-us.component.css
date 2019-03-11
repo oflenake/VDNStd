@@ -1,40 +1,64 @@
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
-li .glyphicon {
-  margin-right: 10px;
+/*<style>
+    #link_bar a { padding:15px; font-weight:bold; float:left; }
+    #link_bar a:link { color:#d0d0d0; background-color:#0000a0; }
+    #link_bar a:visited { color:#c0c0c0; background-color:#0000a0; }
+    #link_bar a:hover { color:#ffffff; background-color:#000060; }
+    #link_bar a:active { color:#f0f0f0; background-color:#00ff00; }
+</style>*/
+
+/* Link color styling highlighting rules for all template links */
+/*a {
+  padding: 10px;
+  font-weight: normal;
+  float: left;
+}*/
+
+/*a:link {
+  color: orange;
 }
 
-/* Highlighting rules for nav menu items, using normal link items */
-li.link-active a,
-li.link-active a:hover,
-li.link-active a:focus {
-  background-color: #4189C7;
-  color: white;
+a:visited {
+  color: black;
 }
 
-i .glyphicon {
-  margin-right: 10px;
+a:hover {
+  color: green;
 }
 
-/* Highlighting rules for nav menu items, using material icons (material-icons) */
-i.link-active a,
-i.link-active a:hover,
-i.link-active a:focus {
-  background-color: #4189C7;
-  color: white;
+a:active,
+a:focus {
+  color: blue;
+}*/
+
+a:link {
+  background-color: #ffffff;
+  color: orange;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
 }
 
-img .glyphicon {
-  margin-right: 10px;
+a:visited {
+  background-color: #ffffff;
+  color: black;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
 }
 
-/* Highlighting rules for nav menu items, using images as link items */
-img.link-active a,
-img.link-active a:hover,
-img.link-active a:focus {
-  background-color: #4189C7;
-  color: white;
+a:hover {
+  background-color: #ffffff;
+  color: green;
+}
+
+a:active {
+  background-color: #ffffff;
+  color: black;
 }
 
 .body-template {

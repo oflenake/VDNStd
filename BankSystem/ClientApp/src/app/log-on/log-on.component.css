@@ -20,6 +20,11 @@ body {
   margin: auto;
 }
 
+.fa-university {
+  font-size: 48px;
+  color: black;
+}
+
 .form-label-group {
   position: relative;
   margin-bottom: 1rem;

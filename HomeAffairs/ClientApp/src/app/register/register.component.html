@@ -1,17 +1,74 @@
 <main role="main" class="body-template">
-  <div class="container-fluid">
-    <h2><strong>User Account Registration</strong></h2>
-    <h3>Fancy display heading <small class="text-muted">With faded secondary text</small></h3>
-    <form>
-      <div class="input-group">
-        <input class="form-control-xl" type="text" placeholder="Username">
-        <span class="input-group-button">
-          <button class="btn">
-            <span class=""></span>
-            <img src="../../assets/iconmonstr-copyright-2.svg" />
-          </button>
-        </span>
-      </div>
-    </form>
+  <div class="body-container-fluid">
+    <h2><strong>Register User Account</strong></h2>
+    <!--<h4>Glowing blue input form controls</h4>
+  <form action="#" method="post">
+    <div class="text-center">
+      <label for="textInputName">Text Input Name:</label>
+      <input type="text" name="textInputNameField" id="textInputName" value="" tabindex="1" />
+    </div>
+    <div class="text-center">
+      <label for="textAreaInputData">Textarea Data:</label>
+      <textarea cols="40" rows="8" name="textAreaInputDataField" id="textAreaInputData"></textarea>
+    </div>
+  </form><br />
+  <h4>Simple form</h4>
+  <form action="#" class="simple-form">
+    <input type="text" placeholder="First Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Nick name">
+    <input type="text" placeholder="Favorite pizza toping">
+  </form><br />-->
+    <p>eHomeAffairs allows you to complete your registration and save it so that you can be able to log in to the system.</p>
+    <p>To create a profile, please capture the detail required below:</p>
+    <h3><strong>Account Information</strong></h3>
+    <hr />
+    <p>Please note that all fields marked with * are mandatory.</p>
+    <p style="color: green;">
+      <strong>Please capture your details correctly so that your account can be created successfully.</strong>
+    </p>
+    <div class="container">
+      <form action="/action_page.php">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="country">Country</label>
+          </div>
+          <div class="col-75">
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
   </div>
 </main>

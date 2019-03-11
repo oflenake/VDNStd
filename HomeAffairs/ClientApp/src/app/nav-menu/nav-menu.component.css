@@ -33,3 +33,44 @@ li.link-active a:focus {
 .nav-margin-right {
   margin-right: 2rem;
 }
+
+/* Custom styling for font awesome nav menu icons */
+.fa-home {
+  font-size: 24px;
+  margin-right: 10px;
+}
+  .fa-home.vanished {
+    opacity: 0.0;
+  }
+
+.fa-envelope {
+  font-size: 24px;
+  margin-right: 10px;
+}
+  .fa-envelope.vanished {
+    opacity: 0.0;
+  }
+
+.fa-question-circle {
+  font-size: 24px;
+  margin-right: 10px;
+}
+  .fa-question-circle.vanished {
+    opacity: 0.0;
+  }
+
+.fa-edit {
+  font-size: 24px;
+  margin-right: 10px;
+}
+  .fa-edit.vanished {
+    opacity: 0.0;
+  }
+
+.fa-sign-in-alt {
+  font-size: 24px;
+  margin-right: 10px;
+}
+  .fa-sign-in-alt.vanished {
+    opacity: 0.0;
+  }
