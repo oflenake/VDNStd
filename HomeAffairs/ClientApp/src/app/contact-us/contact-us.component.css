@@ -1,44 +1,12 @@
-/* Custom page CSS
+/* Custom template CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
-/*<style>
-    #link_bar a { padding:15px; font-weight:bold; float:left; }
-    #link_bar a:link { color:#d0d0d0; background-color:#0000a0; }
-    #link_bar a:visited { color:#c0c0c0; background-color:#0000a0; }
-    #link_bar a:hover { color:#ffffff; background-color:#000060; }
-    #link_bar a:active { color:#f0f0f0; background-color:#00ff00; }
-</style>*/
-
-/* Link color styling highlighting rules for all template links */
-/*a {
-  padding: 10px;
-  font-weight: normal;
-  float: left;
-}*/
-
-/*a:link {
-  color: orange;
-}
-
-a:visited {
-  color: black;
-}
-
-a:hover {
-  color: green;
-}
-
-a:active,
-a:focus {
-  color: blue;
-}*/
-
 a:link {
   background-color: #ffffff;
   color: orange;
   padding: 1px 10px;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   display: inline-block;
 }
 
@@ -47,7 +15,7 @@ a:visited {
   color: black;
   padding: 1px 10px;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
   display: inline-block;
 }
 

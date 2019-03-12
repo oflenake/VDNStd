@@ -1,74 +1,67 @@
 <main role="main" class="body-template">
-  <div class="body-container-fluid">
-    <h2><strong>Register User Account</strong></h2>
-    <!--<h4>Glowing blue input form controls</h4>
-  <form action="#" method="post">
-    <div class="text-center">
-      <label for="textInputName">Text Input Name:</label>
-      <input type="text" name="textInputNameField" id="textInputName" value="" tabindex="1" />
-    </div>
-    <div class="text-center">
-      <label for="textAreaInputData">Textarea Data:</label>
-      <textarea cols="40" rows="8" name="textAreaInputDataField" id="textAreaInputData"></textarea>
-    </div>
-  </form><br />
-  <h4>Simple form</h4>
-  <form action="#" class="simple-form">
-    <input type="text" placeholder="First Name" required>
-    <input type="email" placeholder="Email" required>
-    <input type="text" placeholder="Nick name">
-    <input type="text" placeholder="Favorite pizza toping">
-  </form><br />-->
-    <p>eHomeAffairs allows you to complete your registration and save it so that you can be able to log in to the system.</p>
-    <p>To create a profile, please capture the detail required below:</p>
-    <h3><strong>Account Information</strong></h3>
+  <div class="body-container">
+    <h2>
+      <strong>Register User Profile</strong>
+    </h2>
+    <p>eHomeAffairs allows you to complete your registration and save it
+      so that you can be able to log in to the system.
+    </p>
+    <p>To create an account profile, please capture the detail required below:</p>
+    <h3>
+      <strong>Account Information</strong>
+    </h3>
     <hr />
     <p>Please note that all fields marked with * are mandatory.</p>
     <p style="color: green;">
-      <strong>Please capture your details correctly so that your account can be created successfully.</strong>
+      <strong>Please ensure that you capture your details correctly so that
+      your new account profile can be created successfully.
+      </strong>
     </p>
     <div class="container">
-      <form action="/action_page.php">
+      <!-- Form section start -->
+      <h1 class="h3 mb-3 font-weight-normal text-center">Create new profile</h1>
+      <form class="form-responsive" action="/action_page.php">
         <div class="row">
           <div class="col-25">
-            <label for="fname">First Name</label>
+            <label for="emailAddress">Email Address</label>
           </div>
           <div class="col-75">
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <input type="email" id="emailAddress" name="emailAddressField" placeholder="Your email address..">
           </div>
         </div>
         <div class="row">
           <div class="col-25">
-            <label for="lname">Last Name</label>
+            <label for="inputPassword">Password</label>
           </div>
           <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <input type="password" id="inputPassword" name="inputPasswordField" placeholder="Your password..">
           </div>
         </div>
         <div class="row">
           <div class="col-25">
-            <label for="country">Country</label>
+            <label for="selectProvince">Province</label>
           </div>
           <div class="col-75">
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
+            <select id="selectProvince" name="selectProvinceField">
+              <option value="optionGauteng">Gauteng</option>
+              <option value="optionPretoria">Pretoria</option>
+              <option value="optionCapeTown">Cape Town</option>
             </select>
           </div>
         </div>
         <div class="row">
           <div class="col-25">
-            <label for="subject">Subject</label>
+            <label for="messageComment">Comment</label>
           </div>
           <div class="col-75">
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea id="messageComment" name="messageCommentArea" placeholder="Type a comment" style="height:200px"></textarea>
           </div>
         </div>
         <div class="row">
-          <input type="submit" value="Submit">
+          <button class="btn btn-lg btn-success btn-block" type="submit">Save profile</button>
         </div>
       </form>
+      <!-- Form section end -->
     </div>
   </div>
 </main>

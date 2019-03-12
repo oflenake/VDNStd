@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAffairs", "HomeAffairs\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankSystem", "BankSystem\BankSystem.csproj", "{CB5822D9-3032-478F-BB36-FAD566E5B8FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTicketSystem", "WebTicketSystem\WebTicketSystem.csproj", "{BCD54204-113F-44C0-AB85-7535C088EB89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebTicketSystem", "WebTicketSystem\WebTicketSystem.csproj", "{BCD54204-113F-44C0-AB85-7535C088EB89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MACSSolution", "MACSSolution\MACSSolution.csproj", "{5DBC7571-E2DC-4610-BFA8-6C0864F74CEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MACSSolution", "MACSSolution\MACSSolution.csproj", "{5DBC7571-E2DC-4610-BFA8-6C0864F74CEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDParentApp", "VDParentApp\VDParentApp.csproj", "{0E99FBB9-3AAA-4A16-9A51-F00B2141E411}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{5DBC7571-E2DC-4610-BFA8-6C0864F74CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DBC7571-E2DC-4610-BFA8-6C0864F74CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DBC7571-E2DC-4610-BFA8-6C0864F74CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E99FBB9-3AAA-4A16-9A51-F00B2141E411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E99FBB9-3AAA-4A16-9A51-F00B2141E411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E99FBB9-3AAA-4A16-9A51-F00B2141E411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E99FBB9-3AAA-4A16-9A51-F00B2141E411}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
