@@ -3,13 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <OutputType>Exe</OutputType>
-    <Title>MACSSolution</Title>
+    <Title>VDP</Title>
     <Version>1.0.0-beta</Version>
-    <Description>A .NET Core MACSSolution application.</Description>
+    <Description>A .NET Core VDParentApp application.</Description>
     <Authors>Onkgopotse Lenake</Authors>
     <CopyRight>Vision-Dream</CopyRight>
-    <PackageTags>macs solution online system</PackageTags>
-    <PackageProjectUrl>https://github.com/Kgupi/VDNStd/tree/master/MACSSolution</PackageProjectUrl>
+    <PackageTags>VDParentApp solution online system</PackageTags>
+    <PackageProjectUrl>https://github.com/Kgupi/VDNStd/tree/master/VDParentApp</PackageProjectUrl>
     <PackageIconUrl>https://secure.gravatar.com/avatar/63feb98e7407d11095e1442ae074cfe2</PackageIconUrl>
     <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
     <!--<RuntimeIdentifiers>win10-x64;ubuntu.16.10-x64;osx.10.12-x64</RuntimeIdentifiers>-->
