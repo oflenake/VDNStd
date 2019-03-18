@@ -1,7 +1,12 @@
-body {
-  padding-bottom: 20px;
+/*-- Custom color styles --*/
+navbar-lightblue {
+  background-color: #e3f2fd;
 }
 
-.navbar {
-  margin-bottom: 20px;
+navbar-passionred {
+  background-color: #ef212c;
+}
+
+navbar-aqua {
+  background-color: #21efe4;
 }

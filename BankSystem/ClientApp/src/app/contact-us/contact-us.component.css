@@ -1,12 +1,24 @@
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
-body-template {
-  padding-bottom: 20px;
+li .glyphicon {
+  margin-right: 10px;
 }
 
-.container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
+/* Highlighting rules for nav menu items, using normal link items */
+li.link-active a,
+li.link-active a:hover,
+li.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
+}
+
+body-container {
+  padding-top: 12rem;
+}
+
+.body-template {
+  padding: 8rem 4rem;
+  margin-bottom: 20px;
+  text-align: left;
 }

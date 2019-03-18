@@ -1,0 +1,10 @@
+/*---- Custom css for component ----
+  --------------------------------*/
+body-container {
+  padding-top: 12rem;
+}
+  .body-template {
+    padding: 8rem 4rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }

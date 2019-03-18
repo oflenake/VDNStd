@@ -15,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { LogOnComponent } from './log-on/log-on.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { BodyComponent } from './layout/body/body.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterComponent } from './layout/footer/footer.component';
     RegisterComponent,
     LogOnComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

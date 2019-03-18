@@ -1,6 +1,19 @@
-@media (max-width: 767px) {
-  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-  .body-content {
-    padding-top: 50px;
-  }
+/*-- Custom css style for main app shell --
+  -----------------------------------------*/
+appshell-html {
+  height: 100%;
+  width: 100%;
+}
+
+appshell-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+appshell-content {
+  width: auto;
+  max-width: 100px;
+  margin: 0;
+  padding: 0;
 }

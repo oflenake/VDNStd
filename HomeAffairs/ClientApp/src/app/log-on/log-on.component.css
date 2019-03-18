@@ -182,24 +182,22 @@ body {
   }
 
     .form-login .form-control:focus {
-      box-shadow: 0 0 5px rgba(248, 148, 6, 1);
+      /*box-shadow: 0 0 5px rgba(248, 148, 6, 1);
       padding: 3px 0px 3px 3px;
       margin: 5px 1px 3px 0px;
-      border: 1px solid rgba(248, 148, 6, 1);
+      border: 1px solid rgba(248, 148, 6, 1);*/
       z-index: 2;
     }
-
-  .form-login input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .form-login input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+      .form-login input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .form-login input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
 
 /*-- Custom form styles for: form-login --
   form-login - end

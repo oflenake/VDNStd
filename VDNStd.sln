@@ -17,7 +17,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebTicketSystem", "WebTicke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MACSSolution", "MACSSolution\MACSSolution.csproj", "{5DBC7571-E2DC-4610-BFA8-6C0864F74CEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDParentApp", "VDParentApp\VDParentApp.csproj", "{0E99FBB9-3AAA-4A16-9A51-F00B2141E411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VDParentApp", "VDParentApp\VDParentApp.csproj", "{0E99FBB9-3AAA-4A16-9A51-F00B2141E411}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VDNStd.Resources", "VDNStd.Resources", "{03D362FB-9A77-40B4-9114-C8D94EB1D707}"
+	ProjectSection(SolutionItems) = preProject
+		..\Icons and Images\action-icons\ic_bug_report_black_24dp.png = ..\Icons and Images\action-icons\ic_bug_report_black_24dp.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

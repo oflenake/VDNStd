@@ -1,3 +1,6 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Navigation links */
 li .glyphicon {
   margin-right: 10px;
 }
@@ -10,48 +13,6 @@ li.link-active a:focus {
   color: white;
 }
 
-i .glyphicon {
-  margin-right: 10px;
-}
-
-/* Highlighting rules for nav menu items, using material icons (material-icons) */
-i.link-active a,
-i.link-active a:hover,
-i.link-active a:focus {
-  background-color: #4189C7;
-  color: white;
-}
-
-img .glyphicon {
-  margin-right: 10px;
-}
-
-/* Highlighting rules for nav menu items, using images as link items */
-img.link-active a,
-img.link-active a:hover,
-img.link-active a:focus {
-  background-color: #4189C7;
-  color: white;
-}
-
-body-template {
+body-bottom {
   padding-bottom: 20px;
-}
-
-.navbar {
-  margin-bottom: 20px;
-}
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-.container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-}
-
-.footer {
-  background-color: #f5f5f5;
 }

@@ -1,10 +1,22 @@
 /* Custom page CSS
 -------------------------------------------------- */
+li .glyphicon {
+  margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items, using normal link items */
+li.link-active a,
+li.link-active a:hover,
+li.link-active a:focus {
+  background-color: #4189C7;
+  color: white;
+}
+
 .header-container {
   margin-left: 2rem;
   margin-right: 2rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
 }
 
@@ -21,5 +33,5 @@
   max-width: 100%;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: right;
 }
