@@ -203,8 +203,8 @@ body {
     }
 
     .form-login .btn-secondary {
-      background-color: orange;
-      color: #ffffff;
+      background-color: #ffffff;
+      color: #000000;
       border: 2px solid #11862f;
     }
 

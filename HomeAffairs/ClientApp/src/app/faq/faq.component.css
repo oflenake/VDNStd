@@ -2,6 +2,8 @@
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 body {
+  width: 100%;
+  height: 100;
   margin-left: 2rem;
   margin-right: 2rem;
   display: flex;

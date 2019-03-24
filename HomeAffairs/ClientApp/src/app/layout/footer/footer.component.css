@@ -1,17 +1,17 @@
 /* Custom page CSS
 ------------------- */
 /* Highlighting rules for social icons, using normal link items */
-/*li .glyphicon {
+li .glyphicon {
   margin-right: 10px;
-}*/
+}
 
 /* Highlighting rules for nav menu items */
-/*li.link-active a,
+li.link-active a,
 li.link-active a:hover,
 li.link-active a:focus {
   background-color: inherit;
   color: lightgray;
-}*/
+}
 
 /*a:link {
   background-color: inherit;
@@ -70,7 +70,7 @@ body {
 
   .fmain-bgcolor {
     background-color: #2b2828;
-    color: white;
+    color: lightgray;
   }
 
   .fcopyright-bgcolor {
@@ -103,23 +103,26 @@ input[type=text] {
   ---------------------------------*/
 .fa-info-circle {
   color: dodgerblue;
+  margin-right: 10px;
 }
   .fa-info-circle.vanished {
-    opacity: 0.0;
+    opacity: 1.0;
   }
 
 .fa-bug {
   color: dodgerblue;
+  margin-right: 10px;
 }
   .fa-bug.vanished {
-    opacity: 0.0;
+    opacity: 0.5;
   }
 
 .fa-user-tie {
   color: dodgerblue;
+  margin-right: 10px;
 }
   .fa-user-tie.vanished {
-    opacity: 0.0;
+    opacity: 0.5;
   }
 
 /*
@@ -127,59 +130,67 @@ input[type=text] {
   -----------------------------------*/
 .fa-home {
     color: green;
+    margin-right: 10px;
   }
-   .fa-home.vanished {
+   /*.fa-home.vanished {
      opacity: 0.0;
-   }
+   }*/
 
 .fa-envelope {
   color: green;
+  margin-right: 10px;
 }
-  .fa-envelope.vanished {
+  /*.fa-envelope.vanished {
     opacity: 0.0;
-  }
+  }*/
 
 .fa-edit {
   color: green;
+  margin-right: 10px;
 }
-  .fa-edit.vanished {
+  /*.fa-edit.vanished {
     opacity: 0.0;
-  }
+  }*/
 
 .fa-sign-in-alt {
   color: green;
+  margin-right: 10px;
 }
-  .fa-sign-in-alt.vanished {
+  /*.fa-sign-in-alt.vanished {
     opacity: 0.0;
-  }
+  }*/
 
 /*
   Social icons using font awesome
   ---------------------------------*/
 .fa-facebook-square {
   color: orange;
+  margin-right: 10px;
 }
-  .fa-facebook-square.vanished {
+  /*.fa-facebook-square.vanished {
     opacity: 0.0;
-  }
+  }*/
 
 .fa-twitter {
   color: orange;
+  margin-right: 10px;
 }
-  .fa-twitter.vanished {
+  /*.fa-twitter.vanished {
     opacity: 0.0;
-  }
+  }*/
 
 .fa-whatsapp {
   color: orange;
+  margin-right: 10px;
 }
-  .fa-whatsapp.vanished {
+  /*.fa-whatsapp.vanished {
     opacity: 0.0;
-  }
+  }*/
 
 .fa-github {
   color: orange;
+  margin-right: 10px;
 }
-  .fa-github.vanished {
+  /*.fa-github.vanished {
     opacity: 0.0;
-  }
+  }*/

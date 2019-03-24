@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'eHomeAffairs';
+  title = 'HomeAffairs';
+  faCoffee = faCoffee;
 
   registerForm: FormGroup;
   submitted = false;

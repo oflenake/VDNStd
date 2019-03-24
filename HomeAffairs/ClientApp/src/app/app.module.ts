@@ -18,6 +18,21 @@ import { HeaderComponent } from './layout/header/header.component';
 import { BodyComponent } from './layout/body/body.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
+//import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+//import { library } from '@fortawesome/fontawesome-svg-core';
+//import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+//import { fas } from '@fortawesome/free-solid-svg-icons';
+//import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+//import { faCalendar } from '@fortawesome/free-regular-svg-icons';
+//import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+//import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
+//import { bug } from '@falib/icons';
+//import { edit } from '@falib/icons';
+
+//import { library } from '@fortawesome/fontawesome-svg-core';
+//import { bug } from '@fortawesome/free-solid-svg-icons';
+//import { edit } from '@fortawesome/free-solid-svg-icons';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +53,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    //FontAwesomeModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
@@ -51,4 +67,15 @@ import { FooterComponent } from './layout/footer/footer.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    // Add an icon to the library for convenient access in other components
+    //library.add(faCoffee);
+    //library.add(fas);
+    // library.add(faTwitter);
+    //library.add(faCalendar);
+    //library.add(farStar);
+    //library.add(fasStar);
+    //library.add(bug, edit);
+  }
+}
