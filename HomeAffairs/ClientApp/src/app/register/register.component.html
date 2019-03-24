@@ -1,68 +1,125 @@
-<main role="main" class="body-template">
-  <div class="body-container">
-    <h2>
-      <strong>Register User Profile</strong>
-    </h2>
-    <p>eHomeAffairs allows you to complete your registration and save it
-      so that you can be able to log in to the system.
+<main role="main" class="body">
+  <div class="container-fluid">
+    <h2><strong>Register User Account Profile</strong></h2>
+    <p>To create a new user account profile, please capture the detail required below:</p>
+    <p>
+      <span style="color: green;">
+        <strong>All fields marked with (*) are required. Ensure to capture your details correctly.</strong>
+      </span>
     </p>
-    <p>To create an account profile, please capture the detail required below:</p>
-    <h3>
-      <strong>Account Information</strong>
-    </h3>
     <hr />
-    <p>Please note that all fields marked with * are mandatory.</p>
-    <p style="color: green;">
-      <strong>Please ensure that you capture your details correctly so that
-      your new account profile can be created successfully.
-      </strong>
-    </p>
-    <div class="container">
-      <!-- Form section start -->
-      <h1 class="h3 mb-3 font-weight-normal text-center">Create new profile</h1>
-      <form class="form-responsive" action="/action_page.php">
-        <div class="row">
-          <div class="col-25">
-            <label for="emailAddress">Email Address</label>
-          </div>
-          <div class="col-75">
-            <input type="email" id="emailAddress" name="emailAddressField" placeholder="Your email address..">
-          </div>
+    <!------------------ Form old template snnipet: start ------------------>
+    <form class="form-body form-responsive">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email" autocomplete="off">
         </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="inputPassword">Password</label>
-          </div>
-          <div class="col-75">
-            <input type="password" id="inputPassword" name="inputPasswordField" placeholder="Your password..">
-          </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
         </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="selectProvince">Province</label>
-          </div>
-          <div class="col-75">
-            <select id="selectProvince" name="selectProvinceField">
-              <option value="optionSelect">Select</option>
-              <option value="optionGauteng">Gauteng</option>
-              <option value="optionPretoria">Pretoria</option>
-              <option value="optionCapeTown">Cape Town</option>
-            </select>
-          </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputrFirstName">First Name</label>
+          <input type="text" class="form-control" id="inputrFirstName" placeholder="First Name">
         </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="messageComment">Comment</label>
-          </div>
-          <div class="col-75">
-            <textarea id="messageComment" name="messageCommentArea" placeholder="Type a comment" style="height:200px"></textarea>
-          </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Last Name</label>
+          <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
         </div>
-        <div class="row">
-          <button class="btn btn-lg btn-success" type="submit">Save profile</button>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity">
         </div>
-      </form>
-      <!-- Form section end -->
-    </div>
+        <div class="form-group col-md-4">
+          <label for="inputSuburb">Suburb</label>
+          <select id="inputSuburb" class="form-control">
+            <option selected>Choose...</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputCode">Code</label>
+          <input type="text" class="form-control" id="inputCode">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck" style="padding-left: 20px;">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" style="background-color: #279b37;">
+        Register
+      </button>
+    </form>
+    <!------------------ Form old template snnipet: end ------------------>
   </div>
 </main>
+
+<!-------------------- Alert with dismissal button example: start -------------------->
+<!--<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>-->
+<!-------------------- Alert with dismissal button example: end -------------------->
+
+<!------------ Form division section: start  ------------>
+<!--<div class="container">
+  <h1 class="h3 mb-3 font-weight-normal text-center">Create account</h1>
+  <form class="form-responsive" action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="emailAddress">Email Address</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="emailAddress" name="emailAddressField" placeholder="Your email address..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="inputPassword">Password</label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="inputPassword" name="inputPasswordField" placeholder="Your password..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="selectProvince">Province</label>
+      </div>
+      <div class="col-75">
+        <select id="selectProvince" name="selectProvinceField">
+          <option value="optionSelect">Select</option>
+          <option value="optionGauteng">Gauteng</option>
+          <option value="optionPretoria">Pretoria</option>
+          <option value="optionCapeTown">Cape Town</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="messageComment">Comment</label>
+      </div>
+      <div class="col-75">
+        <textarea id="messageComment" name="messageCommentArea" placeholder="Type a comment" style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn btn-lg btn-success" type="submit">Register</button>
+    </div>
+  </form>
+</div>-->
+<!-------------- Form division section: end ------------>

@@ -1,5 +1,7 @@
-/*-- Customs styles for nav menu
-  --------------------------------*/
+/*
+  Customs styles for nav menu margins
+  -----------------------------------
+*/
 .nav-splitter-top {
   margin-top: 20px;
 }
@@ -8,11 +10,17 @@
   margin-left: 2rem;
 }
 
-.nav-body {
-  width: auto;
-  max-width: 100%;
-  text-align: center;
+.nav-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
+
+  .nav-body {
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+  }
 
 .nav-splitter-bottom {
   margin-bottom: 20px;
@@ -22,8 +30,192 @@
   margin-right: 2rem;
 }
 
-/*-- Customs styles for font awesome nav menu icons
-  ---------------------------------------------------*/
+/*
+  Customs styles for nav menu buttons
+  -----------------------------------
+*/
+btn .glyphicon {
+  margin-left: 10px;
+}
+
+/* Highlighting rules for nav menu items */
+btn.link-active a,
+btn.link-active a:hover,
+btn.link-active a:focus {
+  color: lightgray;
+  background-color: inherit;
+}
+
+btn {
+  background-color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-nav-brand {
+  color: #279b37;
+  border: 2px solid #279b37;
+  font-size: 16px;
+  background-image: url("../../assets/brand/logo_32.png");
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding: 12px 26px;
+  margin: 4px 2px;
+}
+
+  .btn-nav-brand:hover {
+    background-color: #279b37;
+  }
+
+  .btn-nav-brand:focus {
+    background-color: orange;
+  }
+
+.btn-nav-home {
+  width: 94px;
+  box-sizing: border-box;
+  text-align: right;
+  color: #000000;
+  border: 2px solid #279b37;
+  font-size: 16px;
+  background-image: url("../../assets/navigation/home-2-black_24.png");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  padding: 12px 26px;
+  margin: 4px 2px;
+}
+
+  .btn-nav-home:hover {
+    color: #ffffff;
+    background-color: #279b37;
+    background-image: url("../../assets/navigation/home-2-white_24.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+  }
+
+  .btn-nav-home:focus {
+    color: orange;
+    background-color: #279b37;
+  }
+
+.btn-nav-contact {
+  width: 122px;
+  box-sizing: border-box;
+  text-align: right;
+  color: #000000;
+  border: 2px solid #279b37;
+  font-size: 16px;
+  background-image: url("../../assets/navigation/ic_mail_outline_black_24dp.png");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  padding: 12px 26px;
+  margin: 4px 2px;
+}
+
+  .btn-nav-contact:hover {
+    color: #ffffff;
+    background-color: #279b37;
+    background-image: url("../../assets/navigation/ic_mail_outline_white_24dp.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+  }
+
+  .btn-nav-contact:focus {
+    color: orange;
+    background-color: #279b37;
+  }
+
+.btn-nav-questions {
+  width: 140px;
+  box-sizing: border-box;
+  text-align: right;
+  color: #000000;
+  border: 2px solid #279b37;
+  font-size: 16px;
+  background-image: url("../../assets/navigation/ic_help_outline_black_24dp.png");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  padding: 12px 26px;
+  margin: 4px 2px;
+}
+
+  .btn-nav-questions:hover {
+    background-color: #279b37;
+    color: #ffffff;
+    background-image: url("../../assets/navigation/ic_help_outline_white_24dp.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+  }
+
+  .btn-nav-questions:focus {
+    color: orange;
+    background-color: #279b37;
+  }
+
+.btn-nav-register {
+  width: 126px;
+  box-sizing: border-box;
+  text-align: right;
+  color: #000000;
+  border: 2px solid #279b37;
+  font-size: 16px;
+  background-image: url("../../assets/navigation/ic_assignment_black_24dp.png");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  padding: 12px 26px;
+  margin: 4px 2px;
+}
+
+  .btn-nav-register:hover {
+    background-color: #279b37;
+    color: #ffffff;
+    background-image: url("../../assets/navigation/ic_assignment_white_24dp.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+  }
+
+  .btn-nav-register:focus {
+    color: orange;
+    background-color: #279b37;
+  }
+
+.btn-nav-login {
+  width: 100px;
+  box-sizing: border-box;
+  text-align: right;
+  color: #000000;
+  border: 2px solid #279b37;
+  font-size: 16px;
+  background-image: url("../../assets/navigation/ic_exit_to_app_black_24dp.png");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  padding: 12px 26px;
+  margin: 4px 2px;
+}
+
+  .btn-nav-login:hover {
+    background-color: #279b37;
+    color: #ffffff;
+    background-image: url("../../assets/navigation/ic_exit_to_app_white_24dp.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+  }
+
+  .btn-nav-login:focus {
+    color: orange;
+    background-color: #279b37;
+  }
+
+/*
+  Customs styles for nav menu icons
+  ---------------------------------
+*/
 .fa-home {
   font-size: 24px;
   margin-right: 10px;

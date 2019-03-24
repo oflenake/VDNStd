@@ -1,23 +1,23 @@
-<div class="nav-splitter-top nav-margin-left nav-margin-right">
-  <div class="nav-body-fluid">
+<div class="nav-splitter-top nav-margin-left nav-splitter-bottom nav-margin-right">
+  <div class="nav-body">
     <nav class="navbar navbar-expand-lg my-2 text-uppercase">
-      <button class="navbar-brand btn btn-outline-info btn-md" type="button" [routerLink]='["/"]'>
-        <span class='glyphicon' style='vertical-align: middle;'></span> eHomeAffairs
-      </button>
-      <a class="p-2 btn btn-outline-info btn-lg" [routerLink]='["/"]' role="button">
-        <span class='glyphicon fas fa-home'></span> Home
+      <a class="navbar-brand btn btn-nav-brand btn-md"
+         [routerLink]='["/"]' role="button">
       </a>
-      <a class="p-2 btn btn-outline-info btn-lg" [routerLink]='["/contact-us"]' role="button">
-        <span class='glyphicon far fa-envelope'></span> Contact
+      <a class="p-2 btn btn-nav-home btn-lg"
+         [routerLink]='["/"]' role="button"> Home
       </a>
-      <a class="p-2 btn btn-outline-info btn-lg" [routerLink]='["/faq"]' role="button">
-        <span class='glyphicon far fa-question-circle'></span> Questions
+      <a class="p-2 btn btn-nav-contact btn-lg"
+         [routerLink]='["/contact-us"]' role="button"> Contact
       </a>
-      <a class="p-2 btn btn-outline-info btn-lg" [routerLink]='["/register"]' role="button">
-        <span class='glyphicon fas fa-edit'></span> Register
+      <a class="p-2 btn btn-nav-questions btn-lg"
+         [routerLink]='["/faq"]' role="button"> Questions
       </a>
-      <a class="p-2 btn btn-outline-info btn-lg" [routerLink]='["/log-on"]' role="button">
-        <span class='glyphicon fas fa-sign-in-alt'></span> Log On
+      <a class="p-2 btn btn-nav-register btn-lg"
+         [routerLink]='["/register"]' role="button"> Register
+      </a>
+      <a class="p-2 btn btn-nav-login btn-lg"
+         [routerLink]='["/log-on"]' role="button"> Log In
       </a>
     </nav>
   </div>

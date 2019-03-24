@@ -1,5 +1,5 @@
 /* Custom page CSS
--------------------------------------------------- */
+------------------- */
 /* Highlighting rules for social icons, using normal link items */
 /*li .glyphicon {
   margin-right: 10px;
@@ -49,33 +49,58 @@ li.link-active a:focus {
   text-decoration: none;
   display: inline-block;
 }*/
-
-/* Template containers */
-.footer-container {
+/*
+  Custom styles for the footer template
+  ------------------------------------*/
+body {
+  width: 100%;
+  height: 100%;
   margin-left: 2rem;
   margin-right: 2rem;
   margin: 0;
   padding: 0;
 }
 
-.footer-copyright-container {
+.container {
   width: auto;
   max-width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.footer-bg-color {
-  background-color: #2b2828;
-  color: white;
-}
+  .fmain-bgcolor {
+    background-color: #2b2828;
+    color: white;
+  }
 
-.footer-copyright-bg-color {
-  background-color: #141313;
-  color: white;
-}
+  .fcopyright-bgcolor {
+    background-color: #141313;
+    color: white;
+  }
 
-/*-------- Support icons --------*/
+/*-- Styling animated search input[type=text] for the search form
+  ---------------------------------------------------------------*/
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("../../../assets/content/search-grey_24.png");
+  background-position: 0;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+  input[type=text]:focus {
+      width: 100%;
+    }
+
+/*
+  Support icons using font awesome
+  ---------------------------------*/
 .fa-info-circle {
   color: dodgerblue;
 }
@@ -97,19 +122,19 @@ li.link-active a:focus {
     opacity: 0.0;
   }
 
-/*-------- Navigation icons --------*/
+/*
+  Navigation icons using font awesome
+  -----------------------------------*/
 .fa-home {
-  color: green;
-}
-
-  .fa-home.vanished {
-    opacity: 0.0;
+    color: green;
   }
+   .fa-home.vanished {
+     opacity: 0.0;
+   }
 
 .fa-envelope {
   color: green;
 }
-
   .fa-envelope.vanished {
     opacity: 0.0;
   }
@@ -117,7 +142,6 @@ li.link-active a:focus {
 .fa-edit {
   color: green;
 }
-
   .fa-edit.vanished {
     opacity: 0.0;
   }
@@ -125,12 +149,13 @@ li.link-active a:focus {
 .fa-sign-in-alt {
   color: green;
 }
-
   .fa-sign-in-alt.vanished {
     opacity: 0.0;
   }
 
-/*-------- Social icons --------*/
+/*
+  Social icons using font awesome
+  ---------------------------------*/
 .fa-facebook-square {
   color: orange;
 }

@@ -1,24 +1,38 @@
 /* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-li .glyphicon {
-  margin-right: 10px;
+-------------------- */
+a:link {
+  background-color: #ffffff;
+  color: #ef212c;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* Highlighting rules for nav menu items, using normal link items */
-li.link-active a,
-li.link-active a:hover,
-li.link-active a:focus {
-  background-color: #4189C7;
-  color: white;
+a:visited, a:focus {
+  background-color: #ffffff;
+  color: black;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: #ffffff;
+  color: #007cc0;
+}
+
+a:active {
+  background-color: #ffffff;
+  color: black;
 }
 
 body-container {
   padding-top: 12rem;
 }
 
-.body-template {
-  padding: 8rem 4rem;
-  margin-bottom: 20px;
-  text-align: left;
-}
+  .body-template {
+    padding: 8rem 4rem;
+    text-align: left;
+  }

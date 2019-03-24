@@ -1,21 +1,59 @@
-<main role="main" class="body-template">
-  <div class="container-fluid">
+<main role="main" class="body">
+  <div class="container">
     <h2><strong>Common Questions</strong></h2>
     <p>To create an account profile, please capture the detail required below:</p>
-    <h3>
-      <strong>Account Information</strong>
-    </h3>
     <hr />
-    <p>Please note that all fields marked with * are mandatory.</p>
-    <p style="color: green;">
-      <strong>
-        Please ensure that you capture your details correctly so that
-        your new account profile can be created successfully.
-      </strong>
-    </p>
+    <!-------------------- Alert with dismissal button example: start -------------------->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <!-------------------- Alert with dismissal button example: end -------------------->
+    <br />
+
+    <div class="alert alert-primary" role="alert">
+      A simple primary alert—check it out!
+    </div>
+    <div class="alert alert-primary" role="alert">
+      A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div>
+
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Well done!</h4>
+      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer
+      so that you can see how spacing within an alert works with this kind of content.</p>
+      <hr>
+      <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div>
+
+    <br />
     <p class="text-center">
       <img src="../../assets/siteimages/ehome/construction-girl.jpg"
-            class="rounded mx-auto" alt="Under Construction" width="200" height="200">
+           class="rounded mx-auto" alt="Under Construction" width="200" height="200">
     </p>
   </div>
 </main>
+
+<!-------------- Form sample start --------------->
+<!--<div class="form-background">
+  <form class="form-container" action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="province">Province</label>
+    <select id="province" name="province">
+      <option value="select">Select</option>
+      <option value="gauteng">Gauteng</option>
+      <option value="pretoria">Pretoria</option>
+      <option value="mpumalanga">Mpumalanga</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>-->
+<!-------------- Form sample end --------------->

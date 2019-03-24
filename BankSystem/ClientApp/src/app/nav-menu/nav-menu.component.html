@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-fixed-top" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background-color: #ef212c;">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
           aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand text-center" [routerLink]='["/"]'>
-    <img src="../../../assets/bootstrap-solid.svg"
-         width="30" height="30" class="d-inline-block align-top" alt=""/>
-      Bank System
+    <img src="../../assets/brand/logo-outline_612.png"
+         width="30" height="30" class="d-inline-block align-top" alt="" />
+    {{sysproperties.title}}
   </a>
 
   <div class="collapse navbar-collapse" id="navbarToggler">
@@ -21,17 +21,17 @@
         <a class="nav-link disabled" [routerLink]='["/#"]' tabindex="-1" aria-disabled="true">Transact</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]='["/register"]'>Sign-Up</a>
+        <a class="nav-link" [routerLink]='["/register"]'>Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]='["/log-on"]'>Sign-In</a>
+        <a class="nav-link" [routerLink]='["/log-on"]'>Log In</a>
       </li>
     </ul>
-    <div class="d-flex justify-content-end">
+    <!--<div class="d-flex justify-content-end">-->
       <form class="form-inline my-2 my-lg-0 navbar-text">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search..." aria-label="Search">
+        <!--<button type="submit" class="btn btn-outline-light my-2 my-sm-0">Search</button>-->
       </form>
-    </div>
+    <!--</div>-->
   </div>
 </nav>

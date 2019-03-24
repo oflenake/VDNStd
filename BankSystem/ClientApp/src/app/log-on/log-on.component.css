@@ -13,33 +13,53 @@ li.link-active a:focus {
   color: white;
 }
 
-top-container {
+a:link {
+  background-color: #ffffff;
+  color: #007cc0;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:visited, a:focus {
+  background-color: #ffffff;
+  color: #ef212c;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: #ffffff;
+  color: #007cc0;
+}
+
+a:active {
+  background-color: #ffffff;
+  color: #ef212c;
+}
+
+body {
+  height: 100%;
   padding-top: 12rem;
 }
 
-.top-template {
+.container {
   padding: 8rem 4rem;
   margin-bottom: 20px;
   text-align: left;
 }
 
-main-html {
-  height: 100%;
-}
-
-main-body {
+.form-container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
-}
-
-.fa-university {
-  font-size: 48px;
-  color: black;
+  background-color: #ffffff;
 }
 
 .form-login {
@@ -132,6 +152,53 @@ main-body {
   .form-login .checkbox {
     font-weight: 400;
   }
+
+  .form-login .form-item {
+    position: relative;
+    box-sizing: unset;
+    height: auto;
+    padding: 0;
+    font-weight: 400;
+    background-color: inherit;
+  }
+
+  .form-login .btn {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 13px 50px;
+    margin: 4px 2px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .form-login .btn-primary {
+    background-color: #ef212c;
+    color: #ffffff;
+    border: 1px solid #000000;
+  }
+    .form-login .btn-primary:hover,
+    .form-login .btn-primary:focus {
+      background-color: #a41b35;
+      color: #ffffff;
+      border: 2px solid #11862f;
+    }
+
+    .form-login .btn-secondary {
+      background-color: #909090;
+      color: #ffffff;
+      border: 2px solid #495057;
+    }
+
+      .form-login .btn-secondary:hover,
+      .form-login .btn-secondary:focus {
+        background-color:dimgray;
+        color: #ffffff;
+        border: 2px solid #495057;
+      }
 
   .form-login .form-control {
     position: relative;

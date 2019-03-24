@@ -1,8 +1,9 @@
 <footer class="footer mt-auto py-3 border-top">
   <div class="container-fluid">
-    <span class="text-muted" style="float:left;"> BankSystem v#### &middot; Powered by
-      <a href="https://visiondreamict.wordpress.com/" target="_blank" rel="noreferrer">Vision-Dream</a>
+    <span class="text-muted text-small" style="float:left;">
+      {{sysproperties.alias}}{{sysproperties.version}} &middot; Powered by:
+      <a href="{{sysproperties.VDUrlExternal}}" target="_blank" rel="noreferrer">{{sysproperties.VDDesc}}</a>
     </span>
-    <span class="text-muted" style="float:right;">&copy; 2019 Vision-Dream. All rights reserved.</span>
+    <span class="text-muted text-small" style="float:right;">&copy; {{sysproperties.VDCopyright}}</span>
   </div>
 </footer>
