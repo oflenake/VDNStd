@@ -1,5 +1,6 @@
-/* Custom page CSS
--------------------- */
+/* Custom css styles for contact-us component
+  ------------------------------------------*/
+/*-- Highlighting rules for links  --*/
 a:link {
   background-color: #ffffff;
   color: #ef212c;
@@ -28,11 +29,14 @@ a:active {
   color: black;
 }
 
-body-container {
-  padding-top: 12rem;
+/* CSS styles for container and template
+  -------------------------------------*/
+.container {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-  .body-template {
-    padding: 8rem 4rem;
-    text-align: left;
-  }
+.template {
+  margin-left: 4px;
+  text-align: left;
+}

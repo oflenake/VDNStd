@@ -13,38 +13,34 @@ li.link-active a:focus {
   color: lightgray;
 }
 
-/*a:link {
+a:link {
   background-color: inherit;
-  color: white;
-  padding: 1px 10px;
+  color: lightgrey;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-}*/
+}
 
-/*a:visited {
+a:hover, a:focus {
   background-color: inherit;
-  color: black;
-  padding: 1px 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:visited {
+  background-color: inherit;
+  color: lightgray;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   box-sizing: border-box;
-}*/
-
-/*a:hover, a:focus {
-  background-color: inherit;
-  color: white;
-  padding: 1px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}*/
+}
 
 /*a:active {
-  background-color: lightgrey;
+  background-color: inherit;
   color: black;
-  padding: 1px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -105,25 +101,33 @@ input[type=text] {
   color: dodgerblue;
   margin-right: 10px;
 }
-  .fa-info-circle.vanished {
-    opacity: 1.0;
-  }
+  /*.fa-info-circle.vanished {
+    opacity: 0.0;
+  }*/
 
 .fa-bug {
   color: dodgerblue;
   margin-right: 10px;
 }
-  .fa-bug.vanished {
-    opacity: 0.5;
-  }
+  /*.fa-bug.vanished {
+    opacity: 0.0;
+  }*/
+
+.fa-question-circle {
+  color: dodgerblue;
+  margin-right: 0;
+}
+  /*.fa-question-circle.vanished {
+    opacity: 0.0;
+  }*/
 
 .fa-user-tie {
   color: dodgerblue;
   margin-right: 10px;
 }
-  .fa-user-tie.vanished {
-    opacity: 0.5;
-  }
+  /*.fa-user-tie.vanished {
+    opacity: 0.0;
+  }*/
 
 /*
   Navigation icons using font awesome

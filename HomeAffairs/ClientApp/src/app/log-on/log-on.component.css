@@ -9,21 +9,21 @@ li.link-active a,
 li.link-active a:hover,
 li.link-active a:focus {
   background-color: #ffffff;
-  color: orange;
+  color: #11862f;
 }
 
 a:link {
   background-color: #ffffff;
-  color: black;
+  color: #000000;
   padding: 1px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
 }
 
-a:visited {
+a:visited, a:focus {
   background-color: #ffffff;
-  color: orange;
+  color: #11862f;
   padding: 1px 10px;
   text-align: center;
   text-decoration: none;
@@ -32,22 +32,18 @@ a:visited {
 
 a:hover {
   background-color: #ffffff;
-  color: #11862f;
+  color: orange;
 }
 
-a:active {
+/*a:active {
   background-color: #ffffff;
   color: black;
-}
-
-fa-city {
-  font-size: 48px;
-  color: #11862f;
-}
+}*/
 
 /* Custom styles for main template
   --------------------------------*/
-body {
+.body {
+  width: 100%;
   height: 100%;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -59,6 +55,11 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
+}
+
+.fa-city {
+  font-size: 48px;
+  color: #11862f;
 }
 /*
   Custom styles for form template
@@ -197,7 +198,7 @@ body {
   }
     .form-login .btn-primary:hover,
     .form-login .btn-primary:focus {
-      background-color: limegreen;
+      background-color: #32cd32;
       color: #ffffff;
       border: 2px solid #11862f;
     }
@@ -210,9 +211,9 @@ body {
 
       .form-login .btn-secondary:hover,
       .form-login .btn-secondary:focus {
-        background-color: gold;
-        color: #000000;
-        border: 2px solid #11862f;
+        background-color: #11862f;
+        color: #ffffff;
+        border: 2px solid #000000;
       }
 
   .form-login .form-control {

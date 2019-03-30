@@ -1,5 +1,14 @@
-/*-------------------- Custom css for component --------------------
-  ----------------------------------------------------------------*/
+/*------ Custom css for body component ------
+  -----------------------------------------*/
+.container {
+  padding-top: 50px;
+}
+
+.template {
+  margin-left: 4px;
+  text-align: left;
+}
+
 .btn {
   background-color: #ffffff;
   padding: 12px 50px;
@@ -36,11 +45,3 @@
   background-color: #909090;
   color: #ffffff;
 }
-
-body-container {
-  padding-top: 12rem;
-}
-  .body-template {
-    padding: 8rem 4rem;
-    text-align: left;
-  }

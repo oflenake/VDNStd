@@ -1,101 +1,136 @@
-<main role="main" class="top-container top-template main-html">
-  <div class="main-body">
+<main role="main" class="container">
+  <div class="template">
     <h2><strong>Register User Account Profile</strong></h2>
     <hr>
+    <p class="lead">Enter user account registration information and click on register.</p>
     <!------------------- Register form container: start --------------------->
-    <!-- Two cards in a grid: start -->
     <br />
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-header">
-            Create user account
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary" style="background-color: #ef212c;">Go somewhere</a>
-          </div>
-        </div>
+    <!-- Card container: Start -->
+    <div class="card border-dark mb-3 offset-md-3" style="max-width: 540px;">
+      <!-- Card header -->
+      <div class="card-header text-center p-4">
+        <p class="card-title h3 mb-3">
+          <strong>Create user account</strong>
+        </p>
       </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-header">
-            Setup new user account
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary" style="background-color: #ef212c;">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br />
-    <!-- Two cards in a grid: end -->
-    <div class="card border-dark mb-3 offset-md-3" style="max-width: 410px;">
-      <div class="card-header"><h3>Create new account</h3></div>
-      <div class="card-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <form [formGroup]="registerFormUser" (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                  <label>First Name</label>
-                  <input type="text" formControlName="firstName" class="form-control"
-                         [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-                  <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Last Name</label>
-                  <input type="text" formControlName="lastName" class="form-control"
-                         [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-                  <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Email</label>
-                  <input type="text" formControlName="email" class="form-control"
-                         [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                    <div *ngIf="f.email.errors.required">Email is required</div>
-                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Password</label>
-                  <input type="password" formControlName="password" class="form-control"
-                         [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                    <div *ngIf="f.password.errors.required">Password is required</div>
-                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Confirm Password</label>
-                  <input type="password" formControlName="confirmPassword" class="form-control"
-                         [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
-                  <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
-                    <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
-                    <div *ngIf="f.confirmPassword.errors.minlength">Confirm Password must be at least 6 characters</div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <button [disabled]="loading" class="btn btn-primary" style="background-color: #ef212c;">Register</button>
-                  <!--<button [onClick]="loading" class="btn btn-primary">Register</button>-->
-                </div>
-              </form>
+      <!-- Card body: Start -->
+      <div class="card-body px-lg-5 pt-0">
+        <h5 class="card-title h4 mb-4">
+          <span class="sr-only">Special title treatment</span>
+        </h5>
+        <!-- Register form: Start -->
+        <form class="card-text mb-3" [formGroup]="registerFormUser" (ngSubmit)="onSubmit()">
+          <div class="form-row mb-4">
+            <!-- First name -->
+            <div class="form-group col">
+              <label for="inputFirstName">First name</label>
+              <input type="text" formControlName="inputFirstName" id="inputFirstName" class="form-control" placeholder="First name"
+                     [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+              <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First name is required.</div>
+              </div>
+            </div>
+            <!-- Last name -->
+            <div class="form-group col">
+              <label for="inputLastName">Last name</label>
+              <input type="text" formControlName="inputLastName" id="inputLastName" class="form-control" placeholder="Last name"
+                     [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+              <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <div *ngIf="f.lastName.errors.required">Last name is required.</div>
+              </div>
             </div>
           </div>
-        </div>
+          <!-- Email -->
+          <div class="form-group">
+            <label for="inputEmail">E-mail</label>
+            <input type="text" formControlName="inputEmail" id="inputEmail" class="form-control mb-4" placeholder="E-mail"
+                   [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">Email is required.</div>
+              <div *ngIf="f.email.errors.email">Email must be a valid email address.</div>
+            </div>
+          </div>
+          <!-- Password -->
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" formControlName="inputPassword" id="inputPassword" class="form-control mb-4" placeholder="Password"
+                   aria-describedby="inputPasswordHelpBlock" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <small class="form-text text-muted mb-4" id="inputPasswordHelpBlock">
+              Password must be at least 6 characters.
+            </small>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required.</div>
+              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters.</div>
+            </div>
+          </div>
+          <!-- Re-enter password -->
+          <div class="form-group mb-4">
+            <label for="inputReEnterPassword">Re-enter password</label>
+            <input type="password" formControlName="inputReEnterPassword" id="inputReEnterPassword" class="form-control mb-4"
+                   placeholder="Re-enter password" [ngClass]="{ 'is-invalid': submitted && f.reEnterPassword.errors }" />
+            <div *ngIf="submitted && f.reEnterPassword.errors" class="invalid-feedback">
+              <div *ngIf="f.reEnterPassword.errors.required">Re-enter password is required.</div>
+              <div *ngIf="f.reEnterPassword.errors.minlength">Re-enter password must be at least 6 characters.</div>
+            </div>
+          </div>
+          <!-- Phone number -->
+          <div class="form-group">
+            <label for="inputPhoneNumber">Phone number</label>
+            <input type="text" formControlName="inputPhoneNumber" id="inputPhoneNumber" class="form-control mb-4"
+                   placeholder="Phone number" aria-describedby="inputPhoneNumberHelpBlock">
+            <small id="inputPhoneNumberHelpBlock" class="form-text text-muted mb-4">
+              Optional - for two step authentication.
+            </small>
+            <div *ngIf="submitted && f.inputPhoneNumber.errors" class="invalid-feedback">
+              <div *ngIf="f.inputPhoneNumber.errors.required">Phone number is required.</div>
+            </div>
+          </div>
+          <!-- Register button -->
+          <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary btn-lg btn-block my-4" style="background-color: #ef212c;">
+              Register
+            </button>
+            <!--<button [onClick]="loading" class="btn btn-primary">Register</button>-->
+          </div>
+        </form>
+        <!-- Register form: End -->
       </div>
+      <!-- Card body: End -->
     </div>
+    <!-- Card container: End -->
     <!------------------- Register form container: end --------------------->
   </div>
 </main>
+
+<!-------------- Two cards in a grid: Start -------------->
+<!--<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header text-center py-4">
+        <h5 class="card-title"><strong>Create user account</strong></h5>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary" style="background-color: #ef212c;">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        Setup new user account
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary" style="background-color: #ef212c;">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>-->
+<!-------------- Two cards in a grid: End -------------->
+
 <!-------------------- Alert with dismissal button example: start -------------------->
 <!--<div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Holy guacamole!</strong> You should check in on some of those fields below.
@@ -104,7 +139,6 @@
   </button>
 </div>-->
 <!-------------------- Alert with dismissal button example: end -------------------->
-
 <!------------------ Form old template snnipet: start ------------------>
 <!--<form style="padding-left:25px;">
   <div class="form-row">
@@ -159,7 +193,6 @@
   <button class="btn btn-primary" type="submit">Register</button>
 </form>-->
 <!------------------ Form old template snnipet: end ------------------>
-
 <!------------------ SVG code snnipet 3: start ------------------>
 <!--<svg width="100%" height="100%">
   <rect width="50%" height="50%" fill="red" />
