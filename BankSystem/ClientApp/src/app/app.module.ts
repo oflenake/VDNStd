@@ -17,6 +17,9 @@ import { LogOnComponent } from './log-on/log-on.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { BodyComponent } from './layout/body/body.component';
+import { RegisterAccountComponent } from './register/register-account/register-account.component';
+import { RegisterProfileComponent } from './register/register-profile/register-profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { BodyComponent } from './layout/body/body.component';
     LogOnComponent,
     HeaderComponent,
     FooterComponent,
-    BodyComponent
+    BodyComponent,
+    RegisterAccountComponent,
+    RegisterProfileComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

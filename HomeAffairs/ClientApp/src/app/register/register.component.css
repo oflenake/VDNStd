@@ -1,244 +1,241 @@
-/* Custom css styles for template containers
--------------------------------------------------- */
-.body {
+/* Custom css styles for register component
+------------------------------------------- */
+.container {
   width: 100%;
   height: 100%;
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
-.container {
-  width: auto;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
+  .template {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
 /*
-  Custom styles for form template
-  Form name: form-login - start
-  ------------------------------*/
-  .container .form-container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: #ffffff;
-  }
-
-  .form-registerbase {
-    width: 100%;
-    max-width: 960px;
-    padding: 15px;
-    margin: auto;
-  }
-
-  .form-register {
-    width: 100%;
-    max-width: 960px;
-    padding: 15px;
-    margin: auto;
-  }
-
-  .form-label-group {
-    position: relative;
-    margin-bottom: 1rem;
-  }
-
-    .form-label-group > input,
-    .form-label-group > label {
-      height: 3.125rem;
-      padding: .75rem;
+  Custom styles for generic form container
+------------------------------------------ */
+    .template .form-container {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #eae5e5;
     }
 
-    .form-label-group > label {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
+    .form-register-default {
       width: 100%;
-      margin-bottom: 0; /* Override default `<label>` margin */
-      line-height: 1.5;
-      color: #495057;
-      pointer-events: none;
-      cursor: text; /* Match the input under the label */
-      border: 1px solid transparent;
-      border-radius: .25rem;
-      transition: all .1s ease-in-out;
+      max-width: 960px;
+      padding: 20px;
+      margin: auto;
+      background-color: #f5f5f5;
     }
 
-    .form-label-group input::-webkit-input-placeholder {
-      color: transparent;
+    .form-register {
+      width: 100%;
+      max-width: 960px;
+      padding: 20px;
+      margin: auto;
+      background-color: #f5f5f5;
     }
 
-    .form-label-group input:-ms-input-placeholder {
-      color: transparent;
+    .form-label-group {
+      position: relative;
+      margin-bottom: 1rem;
     }
 
-    .form-label-group input::-ms-input-placeholder {
-      color: transparent;
-    }
-
-    .form-label-group input::-moz-placeholder {
-      color: transparent;
-    }
-
-    .form-label-group input::placeholder {
-      color: transparent;
-    }
-
-    .form-label-group input:not(:placeholder-shown) {
-      padding-top: 1.25rem;
-      padding-bottom: .25rem;
-    }
-
-      .form-label-group input:not(:placeholder-shown) ~ label {
-        padding-top: .25rem;
-        padding-bottom: .25rem;
-        font-size: 12px;
-        color: #777;
+      .form-label-group > input,
+      .form-label-group > label {
+        height: 3.125rem;
+        padding: .75rem;
       }
 
-/* Fallback for Edge
--------------------------------------------------- */
-@supports (-ms-ime-align: auto) {
-    .form-label-group > label {
-      display: none;
-    }
+      .form-label-group > label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        margin-bottom: 0; /* Override default `<label>` margin */
+        line-height: 1.5;
+        color: #495057;
+        pointer-events: none;
+        cursor: text; /* Match the input under the label */
+        border: 2px solid transparent;
+        border-radius: 4px;
+        transition: all .1s ease-in-out;
+      }
 
-    .form-label-group input:-ms-input-placeholder {
-      color: #777;
-    }
+      .form-label-group input::-webkit-input-placeholder {
+        color: transparent;
+      }
+
+      .form-label-group input:-ms-input-placeholder {
+        color: transparent;
+      }
+
+      .form-label-group input::-ms-input-placeholder {
+        color: transparent;
+      }
+
+      .form-label-group input::placeholder {
+        color: transparent;
+      }
+
+      .form-label-group input:not(:placeholder-shown) {
+        padding-top: 1.25rem;
+        padding-bottom: .25rem;
+      }
+
+        .form-label-group input:not(:placeholder-shown) ~ label {
+          padding-top: .25rem;
+          padding-bottom: .25rem;
+          font-size: 12px;
+          color: #777;
+        }
+
+/* Fallback for Edge
+-------------------- */
+@supports (-ms-ime-align: auto) {
+      .form-label-group > label {
+        display: none;
+      }
+
+      .form-label-group input:-ms-input-placeholder {
+        color: #777;
+      }
 }
 
 /* Fallback for IE
--------------------------------------------------- */
+------------------ */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .form-label-group > label {
-      display: none;
-    }
+      .form-label-group > label {
+        display: none;
+      }
 
-    .form-label-group input:-ms-input-placeholder {
-      color: #777;
-    }
+      .form-label-group input:-ms-input-placeholder {
+        color: #777;
+      }
 }
 
-  .form-register .checkbox {
-    font-weight: 400;
-  }
-
-  .form-register .form-item {
-    position: relative;
-    box-sizing: unset;
-    height: auto;
-    padding: 0;
-    font-weight: 400;
-    background-color: inherit;
-  }
-
-  .form-registerbase .btn {
-    position: relative;
-    box-sizing: border-box;
-    padding: 13px 50px;
-    margin: 4px 2px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 4px;
-    transition: 0.4s;
-    cursor: pointer;
-  }
-
-  .form-registerbase .btn-primary {
-    background-color: #279b37;
-    color: #ffffff;
-    border: 2px solid #000000;
-  }
-
-    .form-registerbase .btn-primary:hover,
-    .form-registerbase .btn-primary:focus {
-      background-color: #32cd32;
-      color: #ffffff;
-      border: 2px solid #11862f;
+    .form-register .checkbox {
+      font-weight: 400;
     }
 
-  .form-registerbase .btn-secondary {
-    background-color: #ffffff;
-    color: #000000;
-    border: 2px solid #11862f;
-  }
+    .form-register .form-item {
+      position: relative;
+      box-sizing: unset;
+      height: auto;
+      padding: 0;
+      font-weight: 400;
+      background-color: inherit;
+    }
 
-    .form-registerbase .btn-secondary:hover,
-    .form-registerbase .btn-secondary:focus {
-      background-color: gold;
+    .form-register-default .btn {
+      position: relative;
+      box-sizing: border-box;
+      padding: 13px 50px;
+      margin: 4px 2px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+
+    .form-register-default .btn-primary {
+      background-color: #279b37;
+      color: #ffffff;
+      border: 2px solid #000000;
+    }
+
+      .form-register-default .btn-primary:hover,
+      .form-register-default .btn-primary:focus {
+        background-color: #32cd32;
+        color: #ffffff;
+        border: 2px solid #11862f;
+      }
+
+    .form-register-default .btn-secondary {
+      background-color: #ffffff;
       color: #000000;
       border: 2px solid #11862f;
     }
 
-  .form-register .btn {
-    position: relative;
-    box-sizing: border-box;
-    padding: 13px 50px;
-    margin: 4px 2px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 4px;
-    transition: 0.4s;
-    cursor: pointer;
-  }
+      .form-register-default .btn-secondary:hover,
+      .form-register-default .btn-secondary:focus {
+        background-color: gold;
+        color: #000000;
+        border: 2px solid #11862f;
+      }
 
-  .form-register .btn-primary {
-    background-color: #279b37;
-    color: #ffffff;
-    border: 2px solid #000000;
-  }
-
-    .form-register .btn-primary:hover,
-    .form-register .btn-primary:focus {
-      background-color: #32cd32;
-      color: #ffffff;
-      border: 2px solid #11862f;
+    .form-register .btn {
+      position: relative;
+      box-sizing: border-box;
+      padding: 13px 50px;
+      margin: 4px 2px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      transition: 0.4s;
+      cursor: pointer;
     }
 
-  .form-register .btn-secondary {
-    background-color: #ffffff;
-    color: #000000;
-    border: 2px solid #11862f;
-  }
+    .form-register .btn-primary {
+      background-color: #279b37;
+      color: #ffffff;
+      border: 2px solid #000000;
+    }
 
-    .form-register .btn-secondary:hover,
-    .form-register .btn-secondary:focus {
-      background-color: gold;
+      .form-register .btn-primary:hover,
+      .form-register .btn-primary:focus {
+        background-color: #32cd32;
+        color: #ffffff;
+        border: 2px solid #11862f;
+      }
+
+    .form-register .btn-secondary {
+      background-color: #ffffff;
       color: #000000;
       border: 2px solid #11862f;
     }
 
-  .form-register .form-control {
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
-    padding: 10px;
-    font-size: 16px;
-  }
+      .form-register .btn-secondary:hover,
+      .form-register .btn-secondary:focus {
+        background-color: gold;
+        color: #000000;
+        border: 2px solid #11862f;
+      }
 
-    .form-register .form-control:focus {
-      z-index: 2;
+    .form-register .form-control {
+      position: relative;
+      box-sizing: border-box;
+      height: auto;
+      padding: 10px;
+      font-size: 16px;
     }
 
-  .form-register input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
+      .form-register .form-control:focus {
+        z-index: 2;
+      }
 
-  .form-register input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+    .form-register input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .form-register input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
 
 /*-- Custom form styles for: form-login --
   form-login - end

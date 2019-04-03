@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+//import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -9,33 +9,35 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent implements OnInit {
   title = 'HomeAffairs';
-  faCoffee = faCoffee;
+  //faCoffee = faCoffee;
 
-  registerForm: FormGroup;
+  //registerForm: FormGroup;
+  formGroupRegister: FormGroup;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.registerForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+    this.formGroupRegister = this.formBuilder.group({
+      validateFirstName: ['', Validators.required],
+      validateLastName: ['', Validators.required],
+      validateEmail: ['', [Validators.required, Validators.email]],
+      validatePassword: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
   // convenience getter for easy access to form fields
-  get f() { return this.registerForm.controls; }
+  get formValidators() { return this.formGroupRegister.controls; }
 
+  // 
   onSubmit() {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.registerForm.invalid) {
+    if (this.formGroupRegister.invalid) {
       return;
     }
 
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.formGroupRegister.value))
   }
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"mock-systemproperties.js","sourceRoot":"","sources":["mock-systemproperties.ts"],"names":[],"mappings":";;AAEa,QAAA,gBAAgB,GAAqB;IAChD;QACE,UAAU,EAAE,CAAC;QACb,KAAK,EAAE,YAAY;QACnB,KAAK,EAAE,WAAW;QAClB,OAAO,EAAE,SAAS;QAClB,MAAM,EAAE,4BAA4B;QACpC,WAAW,EAAE,8CAA8C;QAC3D,UAAU,EAAE,0BAA0B;QACtC,aAAa,EAAE,uCAAuC;KACvD;CACF,CAAC"}

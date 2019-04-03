@@ -1,12 +1,20 @@
 <main role="main" class="container">
   <div class="template">
     <h1 class="display-4" style="color: #ef212c;"><strong>{{sysproperties.title}}</strong></h1>
+    <div class="row">
+      <div class="col">
         <p class="lead" style="padding-left:25px;">
-          Welcome back to the easy online banking and account management.<br />
+          Easy online banking and account management.<br />
           Please log in below to continue.<br />
           Register a profile if you don't have one already.<br /><br />
           <a class="btn btn-primary btn-lg" [routerLink]='["/log-on"]' role="button">Log in</a>
           <a class="btn btn-secondary btn-lg" [routerLink]='["/register"]' role="button">Register</a>
         </p>
+      </div>
+      <div class="col">
+        <img src="../../assets/brand/logo-outline_612.png" alt="{{sysproperties.title}}"
+             width="100" height="100" />
+      </div>
+    </div>
   </div>
 </main>

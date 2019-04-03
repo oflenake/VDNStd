@@ -1,8 +1,10 @@
 <main role="main" class="container">
   <div class="template">
-    <h2><strong>Register User Account Profile</strong></h2>
+    <h2><strong>Register Account Profile</strong></h2>
     <hr>
-    <p class="lead">Enter user account registration information and click on register.</p>
+    <div class="text-center mb-3">
+      <p class="h3 mb-3 font-weight-normal">Create account information by capturing your details below:</p>
+    </div>
     <!------------------- Register form container: start --------------------->
     <br />
     <!-- Card container: Start -->
@@ -10,7 +12,7 @@
       <!-- Card header -->
       <div class="card-header text-center p-4">
         <p class="card-title h3 mb-3">
-          <strong>Create user account</strong>
+          <strong>Create account</strong>
         </p>
       </div>
       <!-- Card body: Start -->
@@ -19,65 +21,66 @@
           <span class="sr-only">Special title treatment</span>
         </h5>
         <!-- Register form: Start -->
-        <form class="card-text mb-3" [formGroup]="registerFormUser" (ngSubmit)="onSubmit()">
-          <div class="form-row mb-4">
+        <form class="card-text mb-3 form-register" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
             <!-- First name -->
-            <div class="form-group col">
-              <label for="inputFirstName">First name</label>
+            <div class="form-label-group col mb-4">
               <input type="text" formControlName="inputFirstName" id="inputFirstName" class="form-control" placeholder="First name"
-                     [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-              <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                <div *ngIf="f.firstName.errors.required">First name is required.</div>
+                     [ngClass]="{ 'is-invalid': submitted && f.inputFirstName.errors }" />
+              <label for="inputFirstName">First name</label>
+              <div *ngIf="submitted && f.inputFirstName.errors" class="invalid-feedback">
+                <div *ngIf="f.inputFirstName.errors.required">First name is required.</div>
               </div>
             </div>
             <!-- Last name -->
-            <div class="form-group col">
-              <label for="inputLastName">Last name</label>
+            <div class="form-label-group col mb-4">
               <input type="text" formControlName="inputLastName" id="inputLastName" class="form-control" placeholder="Last name"
-                     [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-              <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                <div *ngIf="f.lastName.errors.required">Last name is required.</div>
+                     [ngClass]="{ 'is-invalid': submitted && f.inputLastName.errors }" />
+              <label for="inputLastName">Last name</label>
+              <div *ngIf="submitted && f.inputLastName.errors" class="invalid-feedback">
+                <div *ngIf="f.inputLastName.errors.required">Last name is required.</div>
               </div>
             </div>
           </div>
           <!-- Email -->
-          <div class="form-group">
+          <div class="form-label-group">
+            <input type="email" formControlName="inputEmail" id="inputEmail" class="form-control mb-4" placeholder="E-mail"
+                   [ngClass]="{ 'is-invalid': submitted && f.inputEmail.errors }" />
             <label for="inputEmail">E-mail</label>
-            <input type="text" formControlName="inputEmail" id="inputEmail" class="form-control mb-4" placeholder="E-mail"
-                   [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-              <div *ngIf="f.email.errors.required">Email is required.</div>
-              <div *ngIf="f.email.errors.email">Email must be a valid email address.</div>
+            <div *ngIf="submitted && f.inputEmail.errors" class="invalid-feedback">
+              <div *ngIf="f.inputEmail.errors.required">Email is required.</div>
+              <div *ngIf="f.inputEmail.errors.email">Email must be a valid email address.</div>
             </div>
           </div>
           <!-- Password -->
-          <div class="form-group">
-            <label for="inputPassword">Password</label>
+          <div class="form-label-group">
             <input type="password" formControlName="inputPassword" id="inputPassword" class="form-control mb-4" placeholder="Password"
-                   aria-describedby="inputPasswordHelpBlock" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-            <small class="form-text text-muted mb-4" id="inputPasswordHelpBlock">
-              Password must be at least 6 characters.
-            </small>
-            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-              <div *ngIf="f.password.errors.required">Password is required.</div>
-              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters.</div>
+                   [ngClass]="{ 'is-invalid': submitted && f.inputPassword.errors }" />
+            <label for="inputPassword">Password</label>
+            <div *ngIf="submitted && f.inputPassword.errors" class="invalid-feedback">
+              <div *ngIf="f.inputPassword.errors.required">Password is required.</div>
+              <div *ngIf="f.inputPassword.errors.minlength">Password must be at least 6 characters long.</div>
             </div>
           </div>
-          <!-- Re-enter password -->
-          <div class="form-group mb-4">
-            <label for="inputReEnterPassword">Re-enter password</label>
-            <input type="password" formControlName="inputReEnterPassword" id="inputReEnterPassword" class="form-control mb-4"
-                   placeholder="Re-enter password" [ngClass]="{ 'is-invalid': submitted && f.reEnterPassword.errors }" />
-            <div *ngIf="submitted && f.reEnterPassword.errors" class="invalid-feedback">
-              <div *ngIf="f.reEnterPassword.errors.required">Re-enter password is required.</div>
-              <div *ngIf="f.reEnterPassword.errors.minlength">Re-enter password must be at least 6 characters.</div>
+          <!-- Confirm password -->
+          <div class="form-label-group">
+            <input type="password" formControlName="inputConfirmPassword" id="inputConfirmPassword" class="form-control mb-4"
+                   placeholder="Confirm password" aria-describedby="inputConfirmPasswordHelpBlock"
+                   [ngClass]="{ 'is-invalid': submitted && f.inputConfirmPassword.errors }" />
+            <label for="inputConfirmPassword">Confirm password</label>
+            <small class="form-text text-muted mb-4" id="inputConfirmPasswordHelpBlock">
+              Password and Confirm password must be at least 6 characters.
+            </small>
+            <div *ngIf="submitted && f.inputConfirmPassword.errors" class="invalid-feedback">
+              <div *ngIf="f.inputConfirmPassword.errors.required">Confirm password is required.</div>
+              <div *ngIf="f.inputConfirmPassword.errors.minlength">Confirm password must be at least 6 characters long.</div>
             </div>
           </div>
           <!-- Phone number -->
-          <div class="form-group">
-            <label for="inputPhoneNumber">Phone number</label>
+          <div class="form-label-group">
             <input type="text" formControlName="inputPhoneNumber" id="inputPhoneNumber" class="form-control mb-4"
                    placeholder="Phone number" aria-describedby="inputPhoneNumberHelpBlock">
+            <label for="inputPhoneNumber">Phone number</label>
             <small id="inputPhoneNumberHelpBlock" class="form-text text-muted mb-4">
               Optional - for two step authentication.
             </small>
@@ -86,12 +89,18 @@
             </div>
           </div>
           <!-- Register button -->
-          <div class="form-group">
-            <button [disabled]="loading" class="btn btn-primary btn-lg btn-block my-4" style="background-color: #ef212c;">
-              Register
+          <div class="form-group my-4 text-center">
+            <button [disabled]="loading" class="btn btn-primary" style="background-color: #ef212c;">
+              Create your BankSystem account
             </button>
             <!--<button [onClick]="loading" class="btn btn-primary">Register</button>-->
           </div>
+          <hr />
+          <p class="text-center">
+            By creating an account, you agree to BankSystem's
+            <a href="#">Conditions of Use</a> and
+            <a href="#">Privacy Notice</a>.
+          </p>
         </form>
         <!-- Register form: End -->
       </div>

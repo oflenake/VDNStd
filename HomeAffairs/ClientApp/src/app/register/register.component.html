@@ -1,6 +1,6 @@
-<main role="main" class="body">
-  <div class="container-fluid">
-    <h2><strong>Register User Account Profile</strong></h2>
+<main role="main" class="container">
+  <div class="template">
+    <h2><strong>Register Account Profile</strong></h2>
     <p>To create a new user account profile, please capture the detail required below:</p>
     <p>
       <span style="color: green;">
@@ -19,21 +19,21 @@
       </p>
     </div>-->
 
-    <form class="form-registerbase">
+    <form class="form-register">
       <div class="form-row">
-        <div class="form-group col-sm-2">
-          <label for="inputTitle">*Title</label>
+        <div class="form-label-group col-sm-2">
+          <label for="inputTitle"></label>
           <select class="custom-select custom-select-lg" id="inputTitle" required>
-            <option selected>Select...</option>
+            <option selected style="font-weight:bolder">*Title</option>
             <option value="1">Dr</option>
             <option value="2">Mr</option>
             <option value="3">Miss</option>
             <option value="4">Mrs</option>
           </select>
         </div>
-        <div class="form-group col-sm-2">
-          <label for="inputInitials">Initials</label>
+        <div class="form-label-group col-sm-2">
           <input type="text" id="inputInitials" class="form-control" placeholder="Initials" required autocomplete="off">
+          <label for="inputInitials">Initials</label>
         </div>
         <div class="form-group col-sm-4">
           <label for="inputFirstName">*First name</label>

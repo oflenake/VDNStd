@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SYSTEMPROPERTIES = [
+    {
+        propertyID: 1,
+        title: 'BankSystem',
+        alias: 'App ver: ',
+        version: '1.0.0.0',
+        VDDesc: 'Vision-Dream ICT Solutions',
+        VDCopyright: '2019 Vision-Dream, Inc. All rights reserved.',
+        VDUrlLocal: 'http://visiondream.local',
+        VDUrlExternal: 'https://visiondreamict.wordpress.com/'
+    }
+];
+//# sourceMappingURL=mock-systemproperties.js.map

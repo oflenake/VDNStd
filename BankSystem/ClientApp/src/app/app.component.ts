@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
       inputLastName: ['', Validators.required],
       inputEmail: ['', [Validators.required, Validators.email]],
       inputPassword: ['', [Validators.required, Validators.minLength(6)]],
-      inputReEnterPassword: ['', [Validators.required, Validators.minLength(6)]],
+      inputConfirmPassword: ['', [Validators.required, Validators.minLength(6)]],
       inputPhoneNumber: ['', Validators.required],
     });
   }

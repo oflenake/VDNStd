@@ -17,6 +17,9 @@ import { LogOnComponent } from './log-on/log-on.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { BodyComponent } from './layout/body/body.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { RegisterAccountComponent } from './register/register-account/register-account.component';
+import { RegisterProfileComponent } from './register/register-profile/register-profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 //import { library } from '@fortawesome/fontawesome-svg-core';
@@ -46,7 +49,10 @@ import { FooterComponent } from './layout/footer/footer.component';
     LogOnComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterAccountComponent,
+    RegisterProfileComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

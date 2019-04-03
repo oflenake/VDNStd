@@ -36,11 +36,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\mock-systemproperties.ts" />
     <None Remove="ClientApp\src\app\sysproperties.ts" />
+    <None Remove="ClientApp\src\app\systemproperty.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\mock-systemproperties.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\sysproperties.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\systemproperty.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
