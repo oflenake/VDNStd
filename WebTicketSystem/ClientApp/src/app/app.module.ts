@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { RouterModule } from '@angular/router';
+//import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -24,6 +26,7 @@ import { RegisterAccountComponent } from './register/register-account/register-a
 import { RegisterProfileComponent } from './register/register-profile/register-profile.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { WebtSearchComponent } from './webt-search/webt-search.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +48,15 @@ import { AppRoutingModule } from './/app-routing.module';
     DashboardDetailComponent,
     RegisterAccountComponent,
     RegisterProfileComponent,
-    MessagesComponent
+    MessagesComponent,
+    WebtSearchComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    HttpClientInMemoryWebApiModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },

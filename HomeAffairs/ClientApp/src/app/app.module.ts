@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { RouterModule } from '@angular/router';
+//import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -22,6 +24,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardDetailComponent } from './dashboard/dashboard-detail/dashboard-detail.component';
+import { HomeaSearchComponent } from './homea-search/homea-search.component';
 
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 //import { library } from '@fortawesome/fontawesome-svg-core';
@@ -56,11 +59,13 @@ import { DashboardDetailComponent } from './dashboard/dashboard-detail/dashboard
     RegisterProfileComponent,
     DashboardComponent,
     MessagesComponent,
-    DashboardDetailComponent
+    DashboardDetailComponent,
+    HomeaSearchComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    HttpClientInMemoryWebApiModule,
     FormsModule,
     ReactiveFormsModule,
     //FontAwesomeModule,

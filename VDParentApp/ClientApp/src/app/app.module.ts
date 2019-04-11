@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { RouterModule } from '@angular/router';
+//import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -18,11 +20,12 @@ import { HeaderComponent } from './layout/header/header.component';
 import { LogOnComponent } from './log-on/log-on.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DashboardDetailComponent } from './dashboard-detail/dashboard-detail.component';
+import { DashboardDetailComponent } from './dashboard/dashboard-detail/dashboard-detail.component';
 import { RegisterAccountComponent } from './register/register-account/register-account.component';
 import { RegisterProfileComponent } from './register/register-profile/register-profile.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { VdSearchComponent } from './vd-search/vd-search.component';
 
 @NgModule({
   declarations: [
@@ -43,12 +46,15 @@ import { AppRoutingModule } from './/app-routing.module';
     DashboardDetailComponent,
     RegisterAccountComponent,
     RegisterProfileComponent,
-    MessagesComponent
+    MessagesComponent,
+    VdSearchComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    HttpClientInMemoryWebApiModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
