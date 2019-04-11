@@ -19,6 +19,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { RegisterAccountComponent } from './register/register-account/register-account.component';
 import { RegisterProfileComponent } from './register/register-profile/register-profile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 //import { library } from '@fortawesome/fontawesome-svg-core';
@@ -51,7 +53,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     RegisterAccountComponent,
     RegisterProfileComponent,
-    DashboardComponent
+    DashboardComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -67,7 +70,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'log-on', component: LogOnComponent },
-    ])
+    ]),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

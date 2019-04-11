@@ -19,6 +19,8 @@ import { BodyComponent } from './layout/body/body.component';
 import { RegisterAccountComponent } from './register/register-account/register-account.component';
 import { RegisterProfileComponent } from './register/register-profile/register-profile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BodyComponent,
     RegisterAccountComponent,
     RegisterProfileComponent,
-    DashboardComponent
+    DashboardComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -50,7 +53,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'log-on', component: LogOnComponent },
-    ])
+    ]),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
