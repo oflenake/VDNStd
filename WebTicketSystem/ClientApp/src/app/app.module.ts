@@ -18,6 +18,12 @@ import { HeaderComponent } from './layout/header/header.component';
 import { LogOnComponent } from './log-on/log-on.component';
 import { NaviMenuComponent } from './navi-menu/navi-menu.component';
 import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardDetailComponent } from './dashboard/dashboard-detail/dashboard-detail.component';
+import { RegisterAccountComponent } from './register/register-account/register-account.component';
+import { RegisterProfileComponent } from './register/register-profile/register-profile.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,12 @@ import { RegisterComponent } from './register/register.component';
     HeaderComponent,
     LogOnComponent,
     NaviMenuComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent,
+    DashboardDetailComponent,
+    RegisterAccountComponent,
+    RegisterProfileComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -44,7 +55,8 @@ import { RegisterComponent } from './register/register.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-    ])
+    ]),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,6 +18,12 @@ import { HeaderComponent } from './layout/header/header.component';
 import { NaviMenuComponent } from './navi-menu/navi-menu.component';
 import { RegisterComponent } from './register/register.component';
 import { LogOnComponent } from './log-on/log-on.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardDetailComponent } from './dashboard/dashboard-detail/dashboard-detail.component';
+import { RegisterAccountComponent } from './register/register-account/register-account.component';
+import { RegisterProfileComponent } from './register/register-profile/register-profile.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,12 @@ import { LogOnComponent } from './log-on/log-on.component';
     HeaderComponent,
     NaviMenuComponent,
     RegisterComponent,
-    LogOnComponent
+    LogOnComponent,
+    DashboardComponent,
+    DashboardDetailComponent,
+    RegisterAccountComponent,
+    RegisterProfileComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -46,7 +57,8 @@ import { LogOnComponent } from './log-on/log-on.component';
       { path: 'faq', component: FaqComponent },
       { path: 'log-on', component: LogOnComponent },
       { path: 'register', component: RegisterComponent },
-    ])
+    ]),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,6 +21,7 @@ import { RegisterProfileComponent } from './register/register-profile/register-p
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardDetailComponent } from './dashboard/dashboard-detail/dashboard-detail.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AppRoutingModule } from './/app-routing.module';
     RegisterAccountComponent,
     RegisterProfileComponent,
     DashboardComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
