@@ -1,50 +1,8 @@
 <main role="main" class="container">
   <div class="template">
-    <h2>
-      <strong>Common Questions</strong>
-    </h2>
-
-    <!-------------- Form sample: Start --------------->
-    <!--<div class="form-background">-->
-    <form class="form-container" action="/action_page.php">
-      <!-- First name -->
-      <label for="inputFirstName">First name</label>
-      <input type="text" id="inputFirstName" name="inputFirstName" class="form-control" placeholder="Your First name..."
-             required minlength="4" appForbiddenName="bob"
-             [(ngModel)]="Kgupi" #name="ngModel">
-
-      <div *ngIf="name.invalid && (name.dirty || name.touched)"
-           class="alert alert-danger">
-
-        <div *ngIf="name.errors.required">
-          Name is required.
-        </div>
-        <div *ngIf="name.errors.minlength">
-          Name must be at least 4 characters long.
-        </div>
-        <div *ngIf="name.errors.forbiddenName">
-          Name cannot be Bob.
-        </div>
-
-      </div>
-
-      <!-- Last name -->
-      <label for="inputLastName">Last name</label>
-      <input type="text" id="inputLastName" name="inputLastName" class="form-control"
-             required minlength="4" placeholder="Your Last name...">
-      <!-- Province -->
-      <label for="selectProvince">Province</label>
-      <select id="selectProvince" name="selectProvince" class="form-control" required>
-        <option selected>--Select--</option>
-        <option value="gp">Gauteng</option>
-        <option value="pta">Pretoria</option>
-        <option value="mp">Mpumalanga</option>
-      </select>
-      <input type="submit" value="Submit">
-    </form>
-    <!--</div>-->
-    <!-------------- Form sample: End --------------->
-
+    <h2><strong>Common Questions</strong></h2>
+    <br />
+    <app-register-account></app-register-account>
     <br />
     <p class="text-center">
       <img src="../../assets/content/construction-girl.jpg"
@@ -61,6 +19,7 @@
   </button>
 </div>-->
 <!-------------------- Alert with dismissal button example: end -------------------->
+
 <!--<div class="alert alert-primary" role="alert">
   A simple primary alert—check it out!
 </div>

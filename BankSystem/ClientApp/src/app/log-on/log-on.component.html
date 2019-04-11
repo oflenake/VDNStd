@@ -11,27 +11,37 @@
           </a>
             <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
         </div>
+        <!-- E-mail address -->
         <div class="form-label-group">
-          <input type="email" id="inputEmail" class="form-control" required autocomplete="off" autofocus>
-          <label for="inputEmail">Email address</label>
+          <input type="email" id="emailAddress" name="emailAddress" class="form-control"
+                 placeholder="E-mail address" required autocomplete="off" autofocus>
+          <label for="emailAddress">E-mail address</label>
         </div>
+        <!-- Password -->
         <div class="form-label-group">
-          <input type="password" id="inputPassword" class="form-control" required>
+          <input type="password" id="inputPassword" name="inputPassword" class="form-control"
+                 placeholder="Password" required autocomplete="off">
           <label for="inputPassword">Password</label>
         </div>
+        <!-- Checkbox -->
         <div class="checkbox mb-3 text-center">
           <label>
             <input type="checkbox" value="rememberMe"> Remember me
           </label>
         </div>
-        <button class="btn btn-primary btn-lg btn-block" type="submit">
-          Log in
-        </button>
+        <!-- Log In -->
+        <div class="text-center">
+          <button class="text-uppercase btn btn-primary btn-lg btn-block" type="submit">
+            Log in
+          </button>
+        </div>
+        <!-- Forgot E-mail / Password -->
         <div class="h4 mb-4 text-muted text-center" style="padding-top: 5px;">
-          <a class="rounded mx-auto d-block form-item" [routerLink]='["/register"]'>Forgot Email / Password?</a>
+          <a class="rounded mx-auto d-block form-item" [routerLink]='["/register"]'>Forgot E-mail / Password?</a>
         </div>
         <h1 class="h4 mb-4 font-weight-normal text-center">Are you a new user?</h1>
-        <div>
+        <!-- Register Now -->
+        <div class="text-uppercase">
           <a class="btn btn-secondary btn-lg btn-block"
              [routerLink]='["/register"]' role="button">Register Now
           </a>

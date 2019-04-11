@@ -35,11 +35,6 @@ a:hover {
   color: orange;
 }
 
-/*a:active {
-  background-color: #ffffff;
-  color: black;
-}*/
-
 /* Custom styles for main template
   --------------------------------*/
 .container {
@@ -49,97 +44,97 @@ a:hover {
   margin-right: 2rem;
 }
 
-.template {
-  width: auto;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
+  .template {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
 
-.fa-city {
-  font-size: 48px;
-  color: #11862f;
-}
+  .fa-city {
+    font-size: 48px;
+    color: #11862f;
+  }
 /*
   Custom styles for form template
   Form name: form-login - start
   ------------------------------*/
-.form-container {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #ffffff;
-}
-
-.form-login {
-  width: 100%;
-  max-width: 420px;
-  padding: 15px;
-  margin: auto;
-}
-
-.form-label-group {
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-  .form-label-group > input,
-  .form-label-group > label {
-    height: 3.125rem;
-    padding: .75rem;
+  .form-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #ffffff;
   }
 
-  .form-label-group > label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
+  .form-login {
     width: 100%;
-    margin-bottom: 0; /* Override default `<label>` margin */
-    line-height: 1.5;
-    color: #495057;
-    pointer-events: none;
-    cursor: text; /* Match the input under the label */
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    transition: all .1s ease-in-out;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
   }
 
-  .form-label-group input::-webkit-input-placeholder {
-    color: transparent;
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
   }
 
-  .form-label-group input:-ms-input-placeholder {
-    color: transparent;
-  }
-
-  .form-label-group input::-ms-input-placeholder {
-    color: transparent;
-  }
-
-  .form-label-group input::-moz-placeholder {
-    color: transparent;
-  }
-
-  .form-label-group input::placeholder {
-    color: transparent;
-  }
-
-  .form-label-group input:not(:placeholder-shown) {
-    padding-top: 1.25rem;
-    padding-bottom: .25rem;
-  }
-
-    .form-label-group input:not(:placeholder-shown) ~ label {
-      padding-top: .25rem;
-      padding-bottom: .25rem;
-      font-size: 12px;
-      color: #777;
+    .form-label-group > input,
+    .form-label-group > label {
+      height: 3.125rem;
+      padding: .75rem;
     }
+
+    .form-label-group > label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      margin-bottom: 0; /* Override default `<label>` margin */
+      line-height: 1.5;
+      color: #495057;
+      pointer-events: none;
+      cursor: text; /* Match the input under the label */
+      border: 1px solid transparent;
+      border-radius: .25rem;
+      transition: all .1s ease-in-out;
+    }
+
+    .form-label-group input::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input::-ms-input-placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input::-moz-placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input::placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input:not(:placeholder-shown) {
+      padding-top: 1.25rem;
+      padding-bottom: .25rem;
+    }
+
+      .form-label-group input:not(:placeholder-shown) ~ label {
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        font-size: 12px;
+        color: #777;
+      }
 
 /* Fallback for Edge
 -------------------------------------------------- */
@@ -186,17 +181,26 @@ a:hover {
     margin: 4px 2px;
     font-size: 16px;
     font-weight: 600;
+    text-align: center;
     border: none;
     border-radius: 4px;
-    transition: 0.4s;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
     cursor: pointer;
   }
+
   .form-login .btn-primary {
-    background-color: #279b37;
+    background-color: #11862f;
     color: #ffffff;
     border: 2px solid #000000;
   }
-    .form-login .btn-primary:hover,
+
+    .form-login .btn-primary:hover {
+      background-color: #32cd32;
+      color: #ffffff;
+      border: 2px solid #11862f;
+    }
+
     .form-login .btn-primary:focus {
       background-color: #32cd32;
       color: #ffffff;
@@ -209,11 +213,16 @@ a:hover {
       border: 2px solid #11862f;
     }
 
-      .form-login .btn-secondary:hover,
-      .form-login .btn-secondary:focus {
+      .form-login .btn-secondary:hover {
         background-color: #11862f;
         color: #ffffff;
         border: 2px solid #000000;
+      }
+
+      .form-login .btn-secondary:focus {
+        background-color: #32cd32;
+        color: #ffffff;
+        border: 2px solid #11862f;
       }
 
   .form-login .form-control {
@@ -225,7 +234,7 @@ a:hover {
   }
 
     .form-login .form-control:focus {
-      /*box-shadow: 0 0 5px rgba(248, 148, 6, 1);
+      /*box-shadow: 0 0 4px rgba(248, 148, 6, 1);
       padding: 3px 0px 3px 3px;
       margin: 5px 1px 3px 0px;
       border: 1px solid rgba(248, 148, 6, 1);*/
@@ -237,6 +246,7 @@ a:hover {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
       }
+
       .form-login input[type="password"] {
         margin-bottom: 10px;
         border-top-left-radius: 0;
@@ -252,41 +262,3 @@ a:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-/*.form-container input[type=submit] {
-  width: 100%;
-  background-color: #338d11;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-  .form-container input[type=submit]:hover {
-    background-color: #45a049;
-  }*/
-
-/*.btn-primary {
-  background-color: #11862f;
-  color: #ffffff;
-  border: 2px solid #11862f;
-}
-
-  .btn-primary:hover,
-  .btn-primary:focus {
-    background-color: #338d11;
-    color: #ffffff;
-  }*/
-
-/*.btn-secondary {
-  color: #909090;
-  border: 2px solid #909090;
-}
-
-  .btn-secondary:hover,
-  .btn-secondary:focus {
-    background-color: #909090;
-    color: #ffffff;
-  }*/

@@ -1,3 +1,119 @@
-<p>
-  register-account works!
-</p>
+<div class="template">
+  <p class="text-center h4 mb-4 font-weight-normal">
+    Create your new system account and register.
+  </p>
+  <!------------------ Register account form: Start ------------------>
+  <form class="form-register-account border border-dark p-5" action="/action_page.php">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-bold">Create account</h1>
+    </div>
+    <!---------- Form row 1 - First and Last names: Start ---------->
+    <div class="form-row">
+      <!---------- First name ---------->
+      <div class="form-label-group col mb-3">
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="*First name" autocomplete="off"
+               required minlength="4" appForbiddenName="bob"
+               [(ngModel)]="usersProfile.firstName" #firstNameControl="ngModel">
+        <label for="firstName">*First name</label>
+        <!---------- First name - Validation checks ---------->
+        <div *ngIf="firstNameControl.invalid && (firstNameControl.dirty || firstNameControl.touched)"
+             class="alert alert-danger">
+          <div *ngIf="firstNameControl.errors.required">
+            First name is required.
+          </div>
+          <div *ngIf="firstNameControl.errors.minlength">
+            At least 4 characters entered.
+          </div>
+          <div *ngIf="firstNameControl.errors.forbiddenName">
+            First name cannot be Bob.
+          </div>
+        </div>
+      </div>
+      <!---------- Last name ---------->
+      <div class="form-label-group col mb-3">
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="*Last name" autocomplete="off"
+               required minlength="4" appForbiddenName="Kgupi"
+               [(ngModel)]="usersProfile.lastName" #lastNameControl="ngModel">
+        <label for="lastName">*Last name</label>
+        <!---------- Last name - Validation checks ---------->
+        <div *ngIf="lastNameControl.invalid && (lastNameControl.dirty || lastNameControl.touched)"
+             class="alert alert-danger">
+          <div *ngIf="lastNameControl.errors.required">
+            Last name is required.
+          </div>
+          <div *ngIf="lastNameControl.errors.minlength">
+            At least 4 characters entered.
+          </div>
+          <div *ngIf="lastNameControl.errors.forbiddenName">
+            Last name cannot be Kgupi.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------- Form row 1 - First and Last names: End ---------->
+    <!---------- E-mail address ---------->
+    <div class="form-label-group mb-3">
+      <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="*E-mail address"
+             required email [(ngModel)]="users.userEmail" #emailAddressControl="ngModel">
+      <label for="emailAddress">*E-mail address</label>
+      <!---------- E-mail address - Validation checks ---------->
+      <div *ngIf="emailAddressControl.invalid && (emailAddressControl.dirty || emailAddressControl.touched)"
+           class="alert alert-danger">
+        <div *ngIf="emailAddressControl.errors.required">
+          E-mail address is required.
+        </div>
+        <div *ngIf="emailAddressControl.errors.email">
+          E-mail address must be valid.
+        </div>
+      </div>
+    </div>
+    <!---------- Password ---------->
+    <div class="form-label-group mb-3">
+      <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="*Password"
+             required minlength="6" [(ngModel)]="accPassword" #inputPasswordControl="ngModel">
+      <label for="inputPassword">*Password</label>
+      <!---------- Password - Validation checks ---------->
+      <div *ngIf="inputPasswordControl.invalid && (inputPasswordControl.dirty || inputPasswordControl.touched)"
+           class="alert alert-danger">
+        <div *ngIf="inputPasswordControl.errors.required">
+          Password is required.
+        </div>
+        <div *ngIf="inputPasswordControl.errors.minlength">
+          Minimum of 6 characters.
+        </div>
+      </div>
+    </div>
+    <!---------- Confirm password ---------->
+    <div class="form-label-group mb-3">
+      <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="*Confirm password"
+             aria-describedby="confirmPasswordHelpBlock" required minlength="6"
+             [(ngModel)]="accConfirmPassword" #confirmPasswordControl="ngModel">
+      <label for="confirmPassword">*Confirm password</label>
+      <!---------- Confirm password - Validation checks ---------->
+      <div class="text-muted text-center">
+        <small class="form-text" id="confirmPasswordHelpBlock">
+          Both password fields each require at least 6 characters long
+        </small>
+      </div>
+      <div *ngIf="confirmPasswordControl.invalid && (confirmPasswordControl.dirty || confirmPasswordControl.touched)"
+           class="alert alert-danger">
+        <div *ngIf="confirmPasswordControl.errors.required">
+          Confirm password is required.
+        </div>
+        <div *ngIf="confirmPasswordControl.errors.minlength">
+          Minimum of 6 characters.
+        </div>
+      </div>
+    </div>
+    <!---------- Register eHomeAffairs Account button ---------->
+    <div class="form-group my-4">
+      <input type="submit" class="text-center" value="Register eHomeAffairs Account">
+    </div>
+    <hr />
+    <p class="text-center">
+      By clicking <em>Register eHomeAffairs Account</em> you agree to eHomeAffairs's
+      <a href="#">Terms of Service</a> and <a href="#">Privacy Notice</a>.
+    </p>
+  </form>
+  <!------------------ Register account form: End ------------------>
+</div>

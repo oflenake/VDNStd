@@ -1,33 +1,171 @@
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
+/* Custom styles for links and their rules --
+  -----------------------------------------*/
+li .glyphicon {
+  margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items, using normal link items */
+li.link-active a,
+li.link-active a:hover,
+li.link-active a:focus {
+  background-color: #ffffff;
+  color: #11862f;
+}
+
+a:link {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:visited, a:focus {
+  background-color: #ffffff;
+  color: #11862f;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: #ffffff;
+  color: orange;
+}
+
 .container {
   width: 100%;
   height: 100%;
   margin-left: 2rem;
   margin-right: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
-.template {
-  width: auto;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-  .template .form-container {
-    border-radius: 5px;
-    background-color: #faf5f5;
-    padding: 20px;
+  .template {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
   }
 
-    .form-container input[type=text], select {
+    .form-container {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .form-register {
       width: 100%;
-      padding: 12px 20px;
+      max-width: 700px;
+      padding: 20px;
+      margin: auto;
+      border-radius: 4px;
+      /*background-color: #faf5f5;*/
+      background-color: #ffffff;
+    }
+
+    .form-label-group {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .form-label-group > input,
+    .form-label-group > label {
+      height: 3.125rem;
+      padding: .75rem;
+    }
+
+    .form-label-group > label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      margin-bottom: 0; /* Override default `<label>` margin */
+      line-height: 2.3;
+      color: #495057;
+      pointer-events: none;
+      cursor: text; /* Match the input under the label */
+      border: 1px solid transparent;
+      border-radius: .25rem;
+      transition: all .1s ease-in-out;
+    }
+
+    .form-label-group input::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input::-ms-input-placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input::-moz-placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input::placeholder {
+      color: transparent;
+    }
+
+    .form-label-group input:not(:placeholder-shown) {
+      padding-top: 1.25rem;
+      padding-bottom: .25rem;
+    }
+
+      .form-label-group input:not(:placeholder-shown) ~ label {
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        font-size: 12px;
+        color: #777;
+      }
+
+/* Fallback for Edge
+-------------------- */
+@supports (-ms-ime-align: auto) {
+    .form-label-group > label {
+      display: none;
+    }
+
+    .form-label-group input:-ms-input-placeholder {
+      color: #777;
+    }
+}
+
+/* Fallback for IE
+------------------ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .form-label-group > label {
+      display: none;
+    }
+
+    .form-label-group input:-ms-input-placeholder {
+      color: #777;
+    }
+}
+
+    .form-register .form-control {
+      position: relative;
+      box-sizing: border-box;
+      height: auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+      .form-register .form-control:focus {
+        z-index: 2;
+      }
+
+    .form-register input[type="text"], select {
+      width: 100%;
       margin: 8px 0;
       display: inline-block;
       border: 1px solid #ccc;
@@ -35,17 +173,57 @@
       box-sizing: border-box;
     }
 
-    .form-container input[type=submit] {
+    .form-register input[type="submit"] {
       width: 100%;
-      background-color: #338d11;
-      color: white;
+      background-color: #11862f;
+      color: #ffffff;
+      box-sizing: border-box;
       padding: 14px 20px;
       margin: 8px 0;
-      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      border: 1px solid #000000;
       border-radius: 4px;
+      -webkit-transition: 0.4s ease-in-out;
+      transition: 0.4s ease-in-out;
       cursor: pointer;
     }
 
-    .form-container input[type=submit]:hover {
-      background-color: #45a049;
+      .form-register input[type="submit"]:hover {
+        background-color: #32cd32;
+        color: #ffffff;
+        border: 1px solid #000000;
+      }
+
+      .form-register input[type="submit"]:focus {
+        background-color: #32cd32;
+        color: #ffffff;
+        border: 1px solid #11862f;
+      }
+
+    .form-register input[type="email"] {
+      width: 100%;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-register input[type="password"] {
+      width: 100%;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+/* Custom form styles for: form-template
+ --------------------------------------- */
+
+    *, *:after, *:before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
     }

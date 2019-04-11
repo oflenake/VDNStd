@@ -5,15 +5,12 @@
   height: 100%;
   margin-left: 2rem;
   margin-right: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
-.template {
-  width: auto;
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
+  .template {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }

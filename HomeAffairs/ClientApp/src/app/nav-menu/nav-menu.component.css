@@ -46,7 +46,7 @@ btn.link-active a:focus {
   background-color: inherit;
 }
 
-btn {
+.btn {
   background-color: #ffffff;
   text-align: center;
   text-decoration: none;

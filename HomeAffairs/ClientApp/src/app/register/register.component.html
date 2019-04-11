@@ -1,107 +1,15 @@
 <main role="main" class="container">
   <div class="template">
     <h2><strong>Register Account Profile</strong></h2>
-    <p>To create a new user account profile, please capture the detail required below:</p>
+    <p>To setup a new account profile and create a new account, please capture the information required below.</p>
     <p>
       <span style="color: green;">
-        <strong>All fields marked with (*) are required. Ensure to capture your details correctly.</strong>
+        <strong>All fields marked with (*) are required. Capture your information correctly to finish registration.</strong>
       </span>
     </p>
     <hr />
-    <!------------------ Form register template snnipet: start ------------------>
-    <!--<div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="../../assets/content/register.png" alt="" width="100" height="100">
-    <h2>Register form</h2>
-      <p class="lead">
-        Below is an example form built entirely with Bootstrap’s form controls.
-        Each required form group has a validation state that can be triggered by
-        attempting to submit the form without completing it.
-      </p>
-    </div>-->
-
-    <form class="form-register">
-      <div class="form-row">
-        <div class="form-label-group col-sm-2">
-          <label for="inputTitle"></label>
-          <select class="custom-select custom-select-lg" id="inputTitle" required>
-            <option selected style="font-weight:bolder">*Title</option>
-            <option value="1">Dr</option>
-            <option value="2">Mr</option>
-            <option value="3">Miss</option>
-            <option value="4">Mrs</option>
-          </select>
-        </div>
-        <div class="form-label-group col-sm-2">
-          <input type="text" id="inputInitials" class="form-control" placeholder="Initials" required autocomplete="off">
-          <label for="inputInitials">Initials</label>
-        </div>
-        <div class="form-group col-sm-4">
-          <label for="inputFirstName">*First name</label>
-          <input type="text" id="inputFirstName" class="form-control" placeholder="First name" value="Onkgopotse" required autocomplete="off">
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        <div class="form-group col-sm-4">
-          <label for="inputLastName">*Last name</label>
-          <input type="text" id="inputLastName" class="form-control" placeholder="Last name" required autocomplete="off">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-4">
-          <label for="inputIDNumber">*ID number</label>
-          <input type="text" class="form-control" id="inputIDNumber" placeholder="ID number" required>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputDOB">Date of Birth</label>
-          <input type="date" class="form-control" id="inputDOB" placeholder="Last Name" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmailAddress">*Email address</label>
-          <input type="email" class="form-control" id="inputEmailAddress" placeholder="Email address" required autocomplete="off">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputCell">*Cell number</label>
-          <input type="text" class="form-control" id="inputCell" placeholder="Cell number">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputHomeAddress">Home address</label>
-        <input type="text" class="form-control" id="inputHomeAddress"
-               placeholder="1234 Street name / drive, apartment, studio, or floor">
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputSuburb">Suburb</label>
-          <select class="custom-select custom-select-lg" id="inputSuburb">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputCode">Code</label>
-          <input type="text" class="form-control" id="inputCode">
-        </div>
-      </div>
-      <!--<div class="form-group">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck" style="padding-left: 20px;">
-            Check me out
-          </label>
-        </div>
-      </div>-->
-      <button class="btn btn-primary" type="submit">
-        Next >>
-      </button>
-    </form>
-    <!------------------ Form old template snnipet: end ------------------>
+    <app-register-profile></app-register-profile>
+    <!--<app-register-account></app-register-account>-->
   </div>
 </main>
 

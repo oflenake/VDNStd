@@ -1,3 +1,141 @@
-<p>
-  register-profile works!
-</p>
+<div class="template">
+  <p class="text-center h4 mb-4 font-weight-normal">
+    Setup your new account profile and click <em>Next</em> to continue.
+  </p>
+  <!------------------ Register profile form: Start ------------------>
+  <form class="form-register-profile border border-dark p-5">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-bold">Setup profile</h1>
+    </div>
+    <!---------- Form row 1 - Title, Initials, First and Last names: Start ---------->
+    <div class="form-row">
+      <!---------- Title ---------->
+      <div class="form-label-group col-md-2 mb-3">
+        <select class="form-control" id="selectTitle" name="selectTitle"
+                [(ngModel)]="usersProfile.title" #selectTitleControl="ngModel">
+          <option *ngFor="let t of titles" [value]="t">{{t}}</option>
+        </select>
+        <label for="selectTitle"></label>
+      </div>
+      <!---------- Initials ---------->
+      <div class="form-label-group col-md-2 mb-3">
+        <input type="text" class="form-control" id="inputInitials" name="inputInitials" placeholder="Initials"
+               autocomplete="off">
+        <label for="inputInitials">Initials</label>
+      </div>
+      <!---------- First name ---------->
+      <div class="form-label-group col-md-4 mb-3">
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name"
+               required autocomplete="off">
+        <label for="firstName">*First name</label>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <!---------- Last name ---------->
+      <div class="form-label-group col-md-4 mb-3">
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="*Last name"
+               required autocomplete="off">
+        <label for="lastName">*Last name</label>
+      </div>
+    </div>
+    <!---------- Form row 1 - Title, Initials, First and Last names: End ---------->
+    <!---------- Form row 2 - ID number and Date of birth: Start ---------->
+    <div class="form-row">
+      <!---------- ID number ---------->
+      <div class="form-label-group col-md-4 mb-3">
+        <input type="text" class="form-control" id="idNumber" name="idNumber" placeholder="*ID number"
+               required>
+        <label for="idNumber">*ID number</label>
+      </div>
+      <!---------- Date of birth ---------->
+      <div class="form-label-group col-md-4 mb-3">
+        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder="Date of birth">
+        <label for="dateOfBirth">Date of birth</label>
+      </div>
+    </div>
+    <!---------- Form row 2 - ID number and Date of birth: End ---------->
+    <!---------- Form row 3 - E-mail address and Cellphone number: Start ---------->
+    <div class="form-row">
+      <!---------- E-mail address ---------->
+      <div class="form-label-group col-md-6 mb-3">
+        <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="E-mail address"
+               required autocomplete="off">
+        <label for="emailAddress">*E-mail address</label>
+      </div>
+      <!---------- Cellphone number ---------->
+      <div class="form-label-group col-md-6 mb-3">
+        <input type="text" class="form-control" id="cellNumber" name="cellNumber" placeholder="*Cellphone number"
+               aria-describedby="cellNumberHelpBlock" maxlength="10"
+               [(ngModel)]="usersProfile.cellPhone" #cellNumberControl="ngModel">
+        <label for="cellNumber">*Cellphone number</label>
+        <!---------- Cellphone number - Help block text ---------->
+        <div class="text-muted text-center">
+          <small class="form-text" id="cellNumberHelpBlock">
+            Optional - for two step authentication
+          </small>
+        </div>
+        <!---------- Cellphone number - Validation checks ---------->
+        <div *ngIf="cellNumberControl.invalid && (cellNumberControl.dirty || cellNumberControl.touched)"
+             class="alert alert-danger">
+          <div *ngIf="cellNumberControl.errors.number">
+            Cellphone number must be valid.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------- Form row 3 - E-mail address and Cellphone number: End ---------->
+    <!---------- Form row 4 - Province and Home address: Start ---------->
+    <div class="form-row">
+      <!---------- Province ---------->
+      <div class="form-label-group col-md-4 mb-3">
+        <div class="form-label-group mb-3">
+          <select class="form-control" id="selectProvince" name="selectProvince"
+                  required [(ngModel)]="usersProfile.province" #selectProvinceControl="ngModel">
+            <option *ngFor="let p of provinces" [value]="p">{{p}}</option>
+          </select>
+          <label for="selectProvince"></label>
+          <!---------- Province - Validation checks ---------->
+          <div *ngIf="selectProvinceControl.invalid && (selectProvinceControl.dirty || selectProvinceControl.touched)"
+               class="alert alert-danger">
+            <div *ngIf="selectProvinceControl.errors.required">
+              Province is required.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------- Home address ---------->
+      <div class="form-label-group col-md-8 mb-3">
+        <input type="text" class="form-control" id="homeAddress" name="homeAddress" placeholder="Home address">
+        <label for="homeAddress">Home address</label>
+      </div>
+    </div>
+    <!---------- Form row 4 - Province and Home address: End ---------->
+    <!---------- Form row 5 - City, Suburb and Code: Start ---------->
+    <div class="form-row">
+      <!---------- City ---------->
+      <div class="form-label-group col-md-6 mb-3">
+        <input type="text" class="form-control" id="inputCity" name="inputCity" placeholder="City">
+        <label for="inputCity">City</label>
+      </div>
+      <!---------- Suburb ---------->
+      <div class="form-label-group col-md-4 mb-3">
+        <input type="text" class="form-control" id="inputSuburb" name="inputSuburb" placeholder="Suburb">
+        <label for="inputSuburb">Suburb</label>
+      </div>
+      <!---------- Code ---------->
+      <div class="form-label-group col-md-2 mb-3">
+        <input type="text" class="form-control" id="inputCode" name="inputCode" placeholder="Code">
+        <label for="inputCode">Code</label>
+      </div>
+    </div>
+    <!---------- Form row 5 - City, Suburb and Code: End ---------->
+    <!---------- Next button ---------->
+    <div class="form-group my-4 text-right">
+      <button class="btn btn-primary" type="submit">
+        Next >>
+      </button>
+    </div>
+  </form>
+  <!------------------ Register profile form: End ------------------>
+</div>
