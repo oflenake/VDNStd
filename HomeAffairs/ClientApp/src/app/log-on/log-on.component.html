@@ -13,13 +13,13 @@
         </div>
         <!-- E-mail address -->
         <div class="form-label-group">
-          <input type="email" id="emailAddress" name="emailAddress" class="form-control"
+          <input type="email" id="emailAddress" name="emailAddress" class="form-control" title="Enter a valid e-mail address"
                  placeholder="E-mail address" required autocomplete="off" autofocus>
           <label for="emailAddress">E-mail address</label>
         </div>
         <!-- Password -->
         <div class="form-label-group">
-          <input type="password" id="inputPassword" name="inputPassword" class="form-control"
+          <input type="password" id="inputPassword" name="inputPassword" class="form-control" title="A minimum of 6 characters"
                  placeholder="Password" required autocomplete="off">
           <label for="inputPassword">Password</label>
         </div>
@@ -35,17 +35,28 @@
             Log in
           </button>
         </div>
-        <!-- Forgot E-mail / Password -->
-        <div class="h4 mb-4 text-center" style="padding-top: 5px;">
-          <a class="rounded mx-auto d-block form-item" [routerLink]='["/register"]'>Forgot E-mail / Password?</a>
+        <div class="d-flex justify-content-around">
+          <!-- Forgot E-mail / Password -->
+          <div class="form-item h5 mb-5">
+            <a [routerLink]='["/register"]'>Forgot E-mail / Password?</a>
+          </div>
+          <!-- New users -->
+          <div class="form-item h5 mb-5">
+            <p>Are you a new user?</p>
+          </div>
         </div>
-        <h1 class="h4 mb-4 font-weight-normal text-center"> Are you a new user?</h1>
         <!-- Register Now -->
-        <div class="text-uppercase">
+        <div class="text-uppercase" style="padding-top: 0;">
           <a class="btn btn-secondary btn-lg btn-block"
              [routerLink]='["/register"]' role="button">
             Register Now
           </a>
+        </div>
+        <!---------- Terms and Conditions link ---------->
+        <div class="h5 mb-5 text-muted text-center" style="padding-top: 5px;">
+          <p>
+            By logging in, I agree to the <a href="#">T&Cs</a>.
+          </p>
         </div>
       </form>
       <!----------------- Form Log In Section: End ----------------->

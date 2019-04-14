@@ -24,6 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.1" />
@@ -36,12 +37,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\constants\http-status-codes.ts" />
     <None Remove="ClientApp\src\app\mock-systemproperties.ts" />
     <None Remove="ClientApp\src\app\sysproperties.ts" />
     <None Remove="ClientApp\src\app\systemproperty.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\constants\http-status-codes.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\mock-systemproperties.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\sysproperties.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\systemproperty.ts" />

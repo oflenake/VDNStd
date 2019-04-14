@@ -5,6 +5,7 @@
   height: 100%;
   margin-left: 2rem;
   margin-right: 2rem;
+  padding-bottom: 50px;
 }
 
   .template {
@@ -206,11 +207,11 @@
   form-login - end
   --------------------------------------*/
 
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+    *, *:after, *:before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
 
 /*
   Responsive form styles for: form-responsive

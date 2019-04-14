@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+//import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { RouterModule } from '@angular/router';
 //import { InMemoryDataService } from './in-memory-data.service';
 
@@ -50,7 +50,7 @@ import { BankSearchComponent } from './bank-search/bank-search.component';
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    HttpClientInMemoryWebApiModule,
+    //HttpClientInMemoryWebApiModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([

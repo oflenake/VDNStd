@@ -15,7 +15,7 @@ li.link-active a:focus {
 a:link {
   background-color: #ffffff;
   color: #000000;
-  padding: 1px 10px;
+  padding: 0;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -23,8 +23,8 @@ a:link {
 
 a:visited, a:focus {
   background-color: #ffffff;
-  color: #11862f;
-  padding: 1px 10px;
+  color: orange;
+  padding: 0;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -32,7 +32,7 @@ a:visited, a:focus {
 
 a:hover {
   background-color: #ffffff;
-  color: orange;
+  color: #11862f;
 }
 
 /* Custom styles for main template
@@ -51,214 +51,214 @@ a:hover {
     padding: 0;
     text-align: left;
   }
-
-  .fa-city {
-    font-size: 48px;
-    color: #11862f;
-  }
 /*
   Custom styles for form template
   Form name: form-login - start
   ------------------------------*/
-  .form-container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: #ffffff;
-  }
-
-  .form-login {
-    width: 100%;
-    max-width: 420px;
-    padding: 15px;
-    margin: auto;
-  }
-
-  .form-label-group {
-    position: relative;
-    margin-bottom: 1rem;
-  }
-
-    .form-label-group > input,
-    .form-label-group > label {
-      height: 3.125rem;
-      padding: .75rem;
+    .form-container {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #ffffff;
     }
 
-    .form-label-group > label {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
+    .form-login {
       width: 100%;
-      margin-bottom: 0; /* Override default `<label>` margin */
-      line-height: 1.5;
-      color: #495057;
-      pointer-events: none;
-      cursor: text; /* Match the input under the label */
-      border: 1px solid transparent;
-      border-radius: .25rem;
-      transition: all .1s ease-in-out;
+      max-width: 420px;
+      padding: 15px;
+      margin: auto;
     }
 
-    .form-label-group input::-webkit-input-placeholder {
-      color: transparent;
+    .fa-city {
+      font-size: 48px;
+      color: #11862f;
     }
 
-    .form-label-group input:-ms-input-placeholder {
-      color: transparent;
+    .form-label-group {
+      position: relative;
+      margin-bottom: 1rem;
     }
 
-    .form-label-group input::-ms-input-placeholder {
-      color: transparent;
-    }
-
-    .form-label-group input::-moz-placeholder {
-      color: transparent;
-    }
-
-    .form-label-group input::placeholder {
-      color: transparent;
-    }
-
-    .form-label-group input:not(:placeholder-shown) {
-      padding-top: 1.25rem;
-      padding-bottom: .25rem;
-    }
-
-      .form-label-group input:not(:placeholder-shown) ~ label {
-        padding-top: .25rem;
-        padding-bottom: .25rem;
-        font-size: 12px;
-        color: #777;
+      .form-label-group > input,
+      .form-label-group > label {
+        height: 3.125rem;
+        padding: .75rem;
       }
+
+      .form-label-group > label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        margin-bottom: 0; /* Override default `<label>` margin */
+        line-height: 1.5;
+        color: #495057;
+        pointer-events: none;
+        cursor: text; /* Match the input under the label */
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        transition: all .1s ease-in-out;
+      }
+
+      .form-label-group input::-webkit-input-placeholder {
+        color: transparent;
+      }
+
+      .form-label-group input:-ms-input-placeholder {
+        color: transparent;
+      }
+
+      .form-label-group input::-ms-input-placeholder {
+        color: transparent;
+      }
+
+      .form-label-group input::-moz-placeholder {
+        color: transparent;
+      }
+
+      .form-label-group input::placeholder {
+        color: transparent;
+      }
+
+      .form-label-group input:not(:placeholder-shown) {
+        padding-top: 1.25rem;
+        padding-bottom: .25rem;
+      }
+
+        .form-label-group input:not(:placeholder-shown) ~ label {
+          padding-top: .25rem;
+          padding-bottom: .25rem;
+          font-size: 12px;
+          color: #777;
+        }
 
 /* Fallback for Edge
 -------------------------------------------------- */
 @supports (-ms-ime-align: auto) {
-  .form-label-group > label {
-    display: none;
-  }
+      .form-label-group > label {
+        display: none;
+      }
 
-  .form-label-group input:-ms-input-placeholder {
-    color: #777;
-  }
+      .form-label-group input:-ms-input-placeholder {
+        color: #777;
+      }
 }
 
 /* Fallback for IE
 -------------------------------------------------- */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .form-label-group > label {
-    display: none;
-  }
-
-  .form-label-group input:-ms-input-placeholder {
-    color: #777;
-  }
-}
-
-  .form-login .checkbox {
-    font-weight: 400;
-  }
-
-  .form-login .form-item {
-    position: relative;
-    box-sizing: unset;
-    height: auto;
-    padding: 0;
-    font-weight: 400;
-    background-color: inherit;
-  }
-
-  .form-login .btn {
-    width: 100%;
-    position: relative;
-    box-sizing: border-box;
-    padding: 13px 50px;
-    margin: 4px 2px;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    border: none;
-    border-radius: 4px;
-    -webkit-transition: 0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
-    cursor: pointer;
-  }
-
-  .form-login .btn-primary {
-    background-color: #11862f;
-    color: #ffffff;
-    border: 2px solid #000000;
-  }
-
-    .form-login .btn-primary:hover {
-      background-color: #32cd32;
-      color: #ffffff;
-      border: 2px solid #11862f;
-    }
-
-    .form-login .btn-primary:focus {
-      background-color: #32cd32;
-      color: #ffffff;
-      border: 2px solid #11862f;
-    }
-
-    .form-login .btn-secondary {
-      background-color: #ffffff;
-      color: #000000;
-      border: 2px solid #11862f;
-    }
-
-      .form-login .btn-secondary:hover {
-        background-color: #11862f;
-        color: #ffffff;
-        border: 2px solid #000000;
+      .form-label-group > label {
+        display: none;
       }
 
-      .form-login .btn-secondary:focus {
+      .form-label-group input:-ms-input-placeholder {
+        color: #777;
+      }
+}
+
+    .form-login .checkbox {
+      font-weight: 400;
+    }
+
+    .form-login .form-item {
+      position: relative;
+      box-sizing: unset;
+      height: auto;
+      padding: 0;
+      font-weight: 400;
+      background-color: inherit;
+    }
+
+    .form-login .btn {
+      width: 100%;
+      position: relative;
+      box-sizing: border-box;
+      padding: 13px 50px;
+      margin: 4px 2px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      border: none;
+      border-radius: 4px;
+      -webkit-transition: 0.4s ease-in-out;
+      transition: 0.4s ease-in-out;
+      cursor: pointer;
+    }
+
+    .form-login .btn-primary {
+      background-color: #11862f;
+      color: #ffffff;
+      border: 2px solid #000000;
+    }
+
+      .form-login .btn-primary:hover {
         background-color: #32cd32;
         color: #ffffff;
         border: 2px solid #11862f;
       }
 
-  .form-login .form-control {
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
-    padding: 10px;
-    font-size: 16px;
-  }
+      .form-login .btn-primary:focus {
+        background-color: #32cd32;
+        color: #ffffff;
+        border: 2px solid #11862f;
+      }
 
-    .form-login .form-control:focus {
-      /*box-shadow: 0 0 4px rgba(248, 148, 6, 1);
-      padding: 3px 0px 3px 3px;
-      margin: 5px 1px 3px 0px;
-      border: 1px solid rgba(248, 148, 6, 1);*/
-      z-index: 2;
+      .form-login .btn-secondary {
+        background-color: #ffffff;
+        color: #000000;
+        border: 2px solid #11862f;
+      }
+
+        .form-login .btn-secondary:hover {
+          background-color: #11862f;
+          color: #ffffff;
+          border: 2px solid #000000;
+        }
+
+        .form-login .btn-secondary:focus {
+          background-color: #32cd32;
+          color: #ffffff;
+          border: 2px solid #11862f;
+        }
+
+    .form-login .form-control {
+      position: relative;
+      box-sizing: border-box;
+      height: auto;
+      padding: 10px;
+      font-size: 16px;
     }
 
-      .form-login input[type="email"] {
-        margin-bottom: -1px;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
+      .form-login .form-control:focus {
+        /*box-shadow: 0 0 4px rgba(248, 148, 6, 1);
+        padding: 3px 0px 3px 3px;
+        margin: 5px 1px 3px 0px;
+        border: 1px solid rgba(248, 148, 6, 1);*/
+        z-index: 2;
       }
 
-      .form-login input[type="password"] {
-        margin-bottom: 10px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-      }
+    .form-login input[type="email"] {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .form-login input[type="password"] {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
         
 /*-- Custom form styles for: form-login --
   form-login - end
   --------------------------------------*/
 
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+    *, *:after, *:before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }

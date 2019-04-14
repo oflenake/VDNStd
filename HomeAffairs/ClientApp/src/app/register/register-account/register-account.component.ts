@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Users, UsersProfile } from './entities';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

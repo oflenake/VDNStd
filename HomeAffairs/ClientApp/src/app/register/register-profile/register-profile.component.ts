@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterProfileComponent implements OnInit {
   selectedTitle = '--Select Title--';
-  selectedProvince = '*----Select Province----';
+  selectedProvince = '--Select Province--';
 
   titles = [this.selectedTitle, 'Dr', 'Mr', 'Miss', 'Mrs'];
 
