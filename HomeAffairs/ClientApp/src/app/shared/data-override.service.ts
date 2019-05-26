@@ -108,5 +108,4 @@ export class DataOverrideService extends DataService {
     options.url = url;
     return options;
   }
-
 }

@@ -13,9 +13,9 @@ import { delay } from 'rxjs/operators';
 
 // Entity collections for the DBContext,
 // accessed and serviced via DataService
+import { HomeBuildVersion } from '../entities/homebuildversion';
 import { Users } from '../entities/users';
 import { UsersProfile } from '../entities/usersprofile';
-import { HomeBuildVersion } from '../entities/homebuildversion';
 
 //@Injectable({
 //  providedIn: 'root'

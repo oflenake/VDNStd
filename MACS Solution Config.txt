@@ -1,0 +1,412 @@
+MACS Solution Project Configuration
+-----------------------------------
+https://www.c-sharpcorner.com/article/angular-7-project-with-asp-net-core-apis-gym-project/
+https://www.c-sharpcorner.com/article/angular-7-spa-crud-with-asp-net-core-and-entity-framework-core3/
+
+
+Systems Environment Configuration:
+----------------------------------
+Modify (hosts) File:						C:\Windows\System32\drivers\etc
+
+Vision-Dream System Config:
+---------------------------
+Development Url:							ROOT_URL: 'http://localhost:44354'
+Production Url:								ROOT_URL: 'http://vision-dream.local'					|	127.0.0.1
+
+MACS System Config:
+-------------------
+Development Url:							ROOT_URL: 'http://localhost:44364'
+Production Url:								ROOT_URL: 'http://macs.vision-dream.local'				|	127.0.0.10
+
+Home Affairs System Config:
+---------------------------
+Development Url:							ROOT_URL: 'http://localhost:44374'
+Production Url:								ROOT_URL: 'http://ehome-affairs.vision-dream.local'		|	127.0.0.11
+
+Bank System Config:
+-------------------
+Development Url:							ROOT_URL: 'http://localhost:44384'
+Production Url:								ROOT_URL: 'http://vdbank.vision-dream.local'			|	127.0.0.12
+
+Web Tickets System Config:
+--------------------------
+Development Url:							ROOT_URL: 'http://localhost:44394'
+Production Url:								ROOT_URL: 'http://webtickets.vision-dream.local'		|	127.0.0.13
+
+
+Credentials
+=========== User =========== 
+Username :- user
+Password :- 123456
+
+=========== Admin =========== 
+Username :- admin
+Password :- 123456
+
+#################################################################################################
+Server AngularPI Development
+----------------------------
+Create AngularAPI Project:					Asp.Net Core Web Application - API Template Version 2.1
+Add Classes:								AppDbContext.cs
+											Employee.cs
+											Middleware.cs
+											EmployeesController.cs
+									
+Add AngularAPI.Contracts Project:			Asp.Net Core Class Library - Version 2.1
+Add AngularAPI.LoggerService Project:		Asp.Net Core Class Library - Version 2.1
+Add AngularAPI.Entities Project:			Asp.Net Core Class Library - Version 2.1
+Add AngularAPI.Repository Project:			Asp.Net Core Class Library - Version 2.1
+
+NLog Packages Install and Config
+--------------------------------
+Install-Package NLog.Config - better command
+
+Install-Package NLog -Version 4.6.3
+Install-Package NLog.Schema -Version 4.6.3
+Install-Package NLog.Extensions.Logging -Version 1.5.0
+Install-Package Microsoft.Extensions.DependencyInjection -Version 2.2.0
+Create nlog.config (lowercase all) file in the root of your application project (File Properties: Copy Always)
+
+Copy C:\Users\Kgupi\.nuget\packages\nlog.schema\4.6.3\contentFiles\any\any\NLog.xsd
+to the root of the project.
+
+Additional Information Links
+----------------------------
+Install-Package NLog.Config - better command
+NLog Tutorial:								https://github.com/NLog/NLog/wiki/Tutorial
+Config File Detailed Info:					https://github.com/NLog/NLog/wiki/Configuration-file
+Other Targets Platform Support:				https://github.com/NLog/NLog/wiki/platform-support
+Downloads:									https://nlog-project.org/download/
+
+
+Log File (nlog.config) Changes:		fileName="C:/VisionDream/VDSW/Release/BookStoreApp/Logs/target/${shortdate}_logfile.txt"
+Internal Logging:					internalLogFile="C:\VisionDream\VDSW\Release\BookStoreApp\Logs\internal\internallog.txt"
+
+
+Install Packages
+----------------
+AngularAPI Project:
+-------------------
+Install-Package System.Linq.Dynamic.Core -Version 1.0.8.8
+Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 6.0.0
+Install-Package Microsoft.AspNetCore.SpaServices.Extensions -Version 2.1.1
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 2.1.1	|	-Version 2.2.4
+Install-Package Swashbuckle.AspNetCore -Version 4.0.1
+Install-Package System.IdentityModel.Tokens.Jwt
+
+Install-Package NLog.Web.AspNetCore -Version 4.8.2
+<PackageReference Include="NLog" Version="4.5.11" />
+
+<PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.4.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.8.8" />
+
+https://jwt.io/introduction/
+
+Install-Package Microsoft.AspNetCore.Http.Abstractions -Version 2.1.1	| 2.2.0
+Install-Package 
+
+Dapper 1.60.6
+A high performance Micro-ORM supporting SQL Server, MySQL, Sqlite, SqlCE, Firebird etc..
+
+##########################################################################################################################################
+==========================================================================================================================================
+Initiate Database Migration (code-first used with project)
+----------------------------------------------------------
+Create Initial database migration script as per model, and execute the below command:
+
+Create DB Migration:						dotnet ef migrations add InitialCreate
+
+
+Resolve issue by adding the .Net Core CLI tool package in 'ContactAPI.csproj' file and then enter 
+"dotnet restore" in VS code terminal to restore these packages to create initial migration script:
+*	Microsoft.EntityFrameworkCore.Tools
+*	Microsoft.EntityFrameworkCore.Tools.DotNet
+
+<ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.2" />
+</ItemGroup>
+
+Create DB Migration Again:					dotnet ef migrations add InitialCreate
+Update Database and Create At Server:		dotnet ef database update
+
+
+Ensure the type is neither abstract, nor generic for the command to be successfull - code-first approach.
+
+==========================================================================================================================================
+##########################################################################################################################################
+
+Build AngularAPI Project:					dotnet build
+Setup Development Variable:					set ASPNETCORE_ENVIRONMENT=Development
+Setup Development URL:						set ASPNETCORE_URLS=http://localhost:64354
+Run AngularAPI Project:						dotnet run
+
+
+Test AngularAPI
+---------------
+Install ChromeRestClient - Advanced REST Client:	https://install.advancedrestclient.com/install#/install
+Test Url:											http://localhost:5052/api/contact/getContact?id=1
+
+
+
+
+Configure Startup to route to Angular
+-------------------------------------
+Add code to configure method in "startup.cs".
+
+// Redirect non api calls to angular app that will handle routing of the app.
+// Setup MVC default route to "index.html" that generates under "wwwroot" folder.
+app.Use(async (context, next) => {  
+    await next();  
+    if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value) && !context.Request.Path.Value.StartsWith("/api/")) {  
+        context.Request.Path = "/index.html";  
+        await next();  
+    }  
+});
+
+// Configure the app to serve index.html from /wwwroot folder    
+app.UseDefaultFiles();  
+app.UseStaticFiles();
+
+// Configure the app for usage as api    
+app.UseMvcWithDefaultRoute();
+
+
+
+
+
+
+##################################################################################################################################
+Scaffold and Configure Angular Frontend UI Development
+------------------------------------------------------
+Directory:							C:\VisionDream\VDREP\src\aspnet\core\AngularApp
+Scaffold New App:					ng new AngularUI
+
+Install and Configure Bootstrap and JQuery
+------------------------------------------
+npm install --save bootstrap
+npm install --save @types/bootstrap
+npm install --save jquery
+npm install --save @types/jquery
+
+JQueryUI and Types Installation
+-------------------------------
+npm install --save jqueryui
+npm install --save @types/jqueryui
+
+
+Configuration File:							angular.json
+Modify Key:									"styles"
+Add Key Values:								"./node_modules/bootstrap/dist/css/bootstrap.min.css",
+											"./node_modules/jqueryui/jquery-ui.min.css",
+
+Modify Key:									"scripts"
+Add Key Values:								"./node_modules/jquery/dist/jquery.min.js",
+											"./node_modules/bootstrap/dist/js/bootstrap.min.js",
+											"./node_modules/jqueryui/jquery-ui.min.js"
+
+Configuration File:							tsconfig.app.json
+Modify Key:									"types"
+Add Key Values:								"jquery",
+											"bootstrap",
+											"jqueryui"
+
+
+Angular CLI Commands
+--------------------
+Install Material, CDK and Animations:		npm install --save @angular/material @angular/cdk @angular/animations
+Install Angular Flex Layout:				npm install @angular/flex-layout –-save
+Install Ngx-Bootstrap Support:				npm install --save ngx-bootstrap
+Install html2canvas Support:				npm install --save html2canvas
+Install jspdf Support:						npm install --save jspdf
+Install xlsx Support:						npm install --save xlsx
+Install docx Support:						npm install --save docx
+Install Gesture Support:					npm install --save hammerjs
+
+Import hammerjs in main.ts:					import 'hammerjs';
+Add Material Icons in index.html:			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+Bootstrap Main and Popups Header Support
+----------------------------------------
+Main Header Styles Support:					<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+											<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+Popups Header Styles Support:				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+Bootstrap Main and Popups Body Support
+--------------------------------------
+BODY Scripts Main Support:					<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+											<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+											<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+BODY Scripts Popups Support:				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+											<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+Full Scripts Section
+--------------------
+
+
+
+Angular Material Pre-built Themes
+---------------------------------
+* deeppurple-amber.css
+* indigo-pink.css
+* pink-blugrey.css
+* purple-green.css
+
+Include themes in styles.css:				@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+											@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+											@import "~@angular/material/prebuilt-themes/pink-blugrey.css";
+											@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+
+
+
+Components
+----------
+ng g component angular-crud
+ng g component employee-add
+ng g component employee-update
+
+
+Manual Services
+---------------
+DataService/EmployeeDataService.ts
+
+
+Entity Data Models
+------------------
+Models/Config.ts
+Models/Employee.ts
+Models/BankAccount.ts
+
+
+#######################################################################################################################
+Production Deployment
+---------------------
+Angular:
+--------
+Run Prod build command:		ng build --prod
+Copy the output files to the dotnet published folder, after publishing.
+
+Asp.Net Core and Windows Hosts File Add Records Configuration:
+--------------------------------------------------------------
+Publish the combined server-side api project with the client-side angular project, to create a full deployment project.
+Open File:			C:\Windows\System32\drivers\etc
+Add:				127.0.0.1   www.vision-dream.local
+Add:				127.0.0.2   www.vision-dream.co.za
+Add:				127.0.0.3   accountowner.vision-dream.local
+Add:				127.0.0.4   accowner-ang-mat.vision-dream.local
+Add:				127.0.0.5	contactapp.vision-dream.local
+Add:				127.0.0.6	gymapp.vision-dream.local
+Add:				127.0.0.7	angularapp.vision-dream.local
+Add:				127.0.0.10	macs.vision-dream.local
+Add:				127.0.0.11	ehome-affairs.vision-dream.local
+Add:				127.0.0.12	vdbank.vision-dream.local
+Add:				127.0.0.13	webtickets.vision-dream.local
+
+
+Configuring IIS
+---------------
+Helpfull Commands:
+------------------
+IIS Restart Command:	iisreset /noforce
+IIS Open Command:		inetmgr
+
+Open IIS and right click on Sites >> Add Web Site.
+Add Website Properties:
+1.	Site Name:			AccOwnerApiAng-Site
+2.  Physical Path:		C:\VisionDream\VDSW\Release\WebApps\AccOwnerApiAng\publish
+3.  Host Name:			accowner-ang-mat.visiondream.local
+
+Click OK to create the website.
+
+Configure Application Pool:
+---------------------------
+Application pool name will be the same as the "Site name".
+Click on "Application Pools" from the left panel and double click on the pool "AccOwnerApiAng-Site".
+Select "No Managed Code" from the .NET CLR version drop-down and click Ok.
+
+
+Configuring DNS Host File:
+--------------------------
+Open File:				hosts
+File Path:				C:\Windows\System32\drivers\etc
+
+Add IIS Hostname to "localhost IP Address", and then test deployment in browser:
+	127.0.0.1   		accowner-ang-mat.visiondream.local
+
+Browser Execution:		http://accowner-ang-mat.visiondream.local/home
+
+
+Troubleshoot Common Hosting Issues:
+-----------------------------------
+* Unable to open the website and get a DNS not found error:
+
+	Check if the hostname is configured correctly in the host file.
+	Make sure that the machine is not connected to any VPN server.
+	Also, if any Web proxy is used then disable it.
+
+* HTTP Error 500.19 – Internal Server Error - The requested page 
+  cannot be accessed because the related configuration data for 
+  the page is invalid:
+
+	The error message is clear. The publish folder is inaccessible because 
+	of insufficient permissions. Grant Read permission to the IIS_IUSRS 
+	group on the publish folder so that it can access Web.config file.
+
+* If the website is loading but data is not getting populated and you get 
+  a 500 Internal server error:
+
+	Make sure that the connection string is in the correct format. The user 
+	id that is specified in the connection string should have db_datareader 
+	and db_datawriter permissions. If the issue persists then provide the 
+	user with db_owner permission.
+
+* If the data is not getting populated and you get an 
+  "operation not allowed" exception:
+
+	This issue generally appears when you try to do a PUT, POST or DELETE 
+	operation in the web API. To mitigate the issue we need to alter the 
+	IIS setup configuration.
+	Navigate to Control Panel >> Turn Windows feature on or off. Then 
+	navigate to Internet Information Services >> World Wide Web Services >> 
+	Common HTTP Features and uncheck the “WebDAV Publishing” option and click ok.
+
+
+####################################################################################################################
+Login Angular App
+-----------------
+Create App:						ng new login
+Install Bootstrap:				npm install bootstrap --save
+
+
+Components
+----------
+ng g c login
+ng g c register
+ng g c dashboard
+
+
+Classes, Services and Modules
+-----------------------------
+ng g class register
+ng g s login
+ng g module app-routing --module app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
