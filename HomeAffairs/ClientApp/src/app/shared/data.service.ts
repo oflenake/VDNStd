@@ -8,7 +8,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
 
-import { Observable, of } from 'rxjs';
+import { of } from 'rxjs/observable/of';
 import { delay } from 'rxjs/operators';
 
 // Entity collections for the DBContext,

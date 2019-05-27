@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs/Rx';
 import { tap, catchError, map } from 'rxjs/operators';
 
 import { HomeBuildVersion } from '../entities/homebuildversion';
@@ -9,11 +9,13 @@ import { Users } from '../entities/users';
 import { UsersProfile } from '../entities/usersprofile';
 import { AppService } from './app.service';
 import { MessageService } from './message.service';
+import { of } from 'rxjs/observable/of';
 
 const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
 
 @Injectable()
 export class HttpClientAppService extends AppService {
+  user: Users[];
 
   constructor(
     private http: HttpClient,

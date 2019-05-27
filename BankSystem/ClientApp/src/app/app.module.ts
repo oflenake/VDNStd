@@ -25,6 +25,10 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardDetailComponent } from './dashboard/dashboard-detail/dashboard-detail.component';
 import { BankSearchComponent } from './bank-search/bank-search.component';
+import { RoutingModule } from './routing/routing.module';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { ServerErrorComponent } from './error-pages/server-error/server-error.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,10 @@ import { BankSearchComponent } from './bank-search/bank-search.component';
     DashboardComponent,
     MessagesComponent,
     DashboardDetailComponent,
-    BankSearchComponent
+    BankSearchComponent,
+    NotFoundComponent,
+    ServerErrorComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -61,7 +68,8 @@ import { BankSearchComponent } from './bank-search/bank-search.component';
       { path: 'register', component: RegisterComponent },
       { path: 'log-on', component: LogOnComponent },
     ]),
-    AppRoutingModule
+    AppRoutingModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,17 +25,25 @@ appwide-body, input[type="text"], button {
   font-family: Arial, Helvetica, sans-serif;
 }*/
 
+@import "~@angular/material/prebuilt-themes/purple-green.css";
 /* Master Styles */
 h1 {
   color: #11862f;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+  font-size: 300%;
 }
 
-h2, h3 {
-  color: #444;
+h2 {
+  color: #11862f;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+  /*font-weight: lighter;*/
+  font-size: 200%;
+}
+
+h3 {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
 }
 
 body {
@@ -43,8 +51,9 @@ body {
 }
 
 body, input[text], button {
-  color: #888;
+  color: #000;
   font-family: Cambria, Georgia;
+  font-weight: normal;
 }
 
 a {
@@ -80,6 +89,7 @@ nav a {
   margin-top: 10px;
   display: inline-block;
   background-color: #eee;
+  color: grey;
   border-radius: 4px;
 }
 
@@ -88,8 +98,9 @@ nav a {
   }
 
   nav a:hover {
-    color: #039be5;
-    background-color: #CFD8DC;
+    color: #fff;
+    /*background-color: #CFD8DC;*/
+    background-color: inherit;
   }
 
   nav a.active {

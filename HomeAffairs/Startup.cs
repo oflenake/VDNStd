@@ -1,3 +1,5 @@
+using System;
+using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -20,7 +22,10 @@ namespace HomeAffairs
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                .AddJsonOptions(
+                    options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -39,6 +44,24 @@ namespace HomeAffairs
             else
             {
                 app.UseExceptionHandler("/Error");
+
+                // Redirect non api calls to angular app that will handle routing of the app.
+                // Setup MVC default route to "index.html" that generates under "wwwroot" folder.
+                app.Use(async (context, next) =>
+                {
+                    await next();
+                    if (context.Response.StatusCode == 404 &&
+                        !Path.HasExtension(context.Request.Path.Value) &&
+                        !context.Request.Path.Value.StartsWith("/api/")
+                        )
+                    {
+                        context.Request.Path = "/index.html";
+                        await next();
+                    }
+                });
+
+                // The default HSTS value is 30 days. You may want to change this for 
+                // production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -53,6 +76,7 @@ namespace HomeAffairs
                     template: "{controller}/{action=Index}/{id?}");
             });
 
+            // In production, the Angular files will be served from this directory
             app.UseSpa(spa =>
             {
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,

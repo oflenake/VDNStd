@@ -27,6 +27,10 @@ import { RegisterProfileComponent } from './register/register-profile/register-p
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { MacsSearchComponent } from './macs-search/macs-search.component';
+import { RoutingModule } from './routing/routing.module';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { ServerErrorComponent } from './error-pages/server-error/server-error.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,10 @@ import { MacsSearchComponent } from './macs-search/macs-search.component';
     RegisterAccountComponent,
     RegisterProfileComponent,
     MessagesComponent,
-    MacsSearchComponent
+    MacsSearchComponent,
+    NotFoundComponent,
+    ServerErrorComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -64,7 +71,8 @@ import { MacsSearchComponent } from './macs-search/macs-search.component';
       { path: 'log-on', component: LogOnComponent },
       { path: 'register', component: RegisterComponent },
     ]),
-    AppRoutingModule
+    AppRoutingModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

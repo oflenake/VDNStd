@@ -26,6 +26,10 @@ import { RegisterProfileComponent } from './register/register-profile/register-p
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { VdSearchComponent } from './vd-search/vd-search.component';
+import { RoutingModule } from './routing/routing.module';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { ServerErrorComponent } from './error-pages/server-error/server-error.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,10 @@ import { VdSearchComponent } from './vd-search/vd-search.component';
     RegisterAccountComponent,
     RegisterProfileComponent,
     MessagesComponent,
-    VdSearchComponent
+    VdSearchComponent,
+    NotFoundComponent,
+    ServerErrorComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -60,7 +67,8 @@ import { VdSearchComponent } from './vd-search/vd-search.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ]),
-    AppRoutingModule
+    AppRoutingModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

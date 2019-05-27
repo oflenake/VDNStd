@@ -25,6 +25,10 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardDetailComponent } from './dashboard/dashboard-detail/dashboard-detail.component';
 import { HomeaSearchComponent } from './homea-search/homea-search.component';
+import { RoutingModule } from './routing/routing.module';
+import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { ServerErrorComponent } from './error-pages/server-error/server-error.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 //import { library } from '@fortawesome/fontawesome-svg-core';
@@ -60,7 +64,10 @@ import { HomeaSearchComponent } from './homea-search/homea-search.component';
     DashboardComponent,
     MessagesComponent,
     DashboardDetailComponent,
-    HomeaSearchComponent
+    HomeaSearchComponent,
+    NotFoundComponent,
+    ServerErrorComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -87,7 +94,8 @@ import { HomeaSearchComponent } from './homea-search/homea-search.component';
       { path: 'register', component: RegisterComponent },
       { path: 'log-on', component: LogOnComponent },
     ]),
-    AppRoutingModule
+    AppRoutingModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
